@@ -13,7 +13,6 @@ const SearchComponent = () => {
     if (value) {
       navigate("/search" + "?=" + value, { state: value, replace: true });
     }
-    window.location.reload(false);
   };
   return (
     <>

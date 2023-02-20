@@ -61,7 +61,10 @@ const App = () => {
           </nav>
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/search" element={<Search location={location} />} />
+            <Route
+              path="/search"
+              element={<Search location={location} key={location.pathname} />}
+            />
             <Route path="/movies" element={<Movies />} />
             <Route path="/tvshows" element={<TVShows />} />
           </Routes>

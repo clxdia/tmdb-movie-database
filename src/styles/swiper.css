@@ -1,0 +1,84 @@
+.swiper {
+  width: 90%;
+  min-width: 90vw;
+  height: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  border-radius: 10px;
+  min-width: 200px !important;
+  width: 200px !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 200px;
+  height: 30vh;
+  min-height: 30vh;
+  max-height: 30vh;
+  min-width: 200px;
+  max-width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.swiper-slide p {
+  color: black;
+  z-index: 10;
+  position: relative;
+}
+
+.linear-gradient {
+  width: 100px;
+  background-color: black;
+  height: 30vh;
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(90deg, transparent, #eaeaea);
+  right: 0;
+}
+
+#dark .linear-gradient {
+  background: linear-gradient(90deg, transparent, #16161a);
+}
+
+.trending_title,
+.trailers_title {
+  padding: 20px;
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+#dark .trending h3 {
+  color: white;
+}
+
+.title {
+  font-size: 15px;
+  line-height: 15px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.link_container > .title {
+  color: white;
+  text-align: center;
+}
+
+#dark .title {
+  color: white !important;
+}
+
+.poster {
+  position: relative;
+}

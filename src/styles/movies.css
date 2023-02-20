@@ -1,0 +1,81 @@
+.movies_homepage {
+  padding-top: 6rem;
+  display: flex;
+  width: 95%;
+  margin: auto;
+  gap: 40px;
+  position: relative;
+}
+
+.aside_movies {
+  width: 280px;
+  min-width: 280px;
+  border-radius: 20px;
+  height: 270px;
+  min-height: 270px;
+  position: sticky;
+  top: 90px;
+  padding: 10px;
+}
+
+#dark .aside_movies {
+  background-color: #001e3c;
+}
+
+#dark .Divider {
+  border-color: black !important;
+}
+
+.aside_movies a,
+ul,
+li {
+  color: black;
+}
+
+.Button {
+  font-size: 1.4rem !important;
+  text-transform: none !important;
+  justify-content: space-between !important;
+  border: 0px solid black !important;
+}
+
+.Icon {
+  color: black;
+}
+
+#dark .Icon {
+  color: white;
+}
+
+#dark .aside_movies a,
+li,
+ul {
+  color: white;
+}
+
+.aside_list li {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.title_movies {
+  padding-bottom: 1.5rem;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#dark .title_movies {
+  color: white;
+}
+
+.movie_lists {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .aside_movies {
+    display: none;
+  }
+}

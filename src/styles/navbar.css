@@ -1,0 +1,93 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=quilon@400&display=swap");
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: #001e3c;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar_links {
+  padding-left: 10px;
+}
+
+.links_container {
+  justify-content: start;
+  display: flex;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end !important;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar h2 {
+  font-size: 1.8rem;
+  font-family: "Quilon", sans-serif;
+  letter-spacing: 0.9px;
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
+  background-color: #00264c !important;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  border-radius: 5px !important;
+}
+
+a,
+li,
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Satoshi", sans-serif;
+  letter-spacing: 0.9px;
+}
+
+.switch_container {
+  align-items: center !important;
+  display: flex;
+  height: fit-content;
+  justify-content: end;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.switch {
+  align-items: center !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.react-switch-bg div {
+  align-items: center !important;
+  display: flex !important;
+}
+
+.react-switch-bg svg {
+  color: white;
+  width: 20px;
+  height: auto;
+}
+
+.moon {
+  margin-left: 3px;
+}
+
+.sun {
+  margin-left: 8px;
+}

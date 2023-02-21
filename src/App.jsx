@@ -24,7 +24,7 @@ import { useLocalStorage } from "usehooks-ts";
 export const ThemeContext = createContext(null);
 
 const App = () => {
-  const [theme, setTheme] = useLocalStorage("light", true);
+  const [theme, setTheme] = useLocalStorage("light");
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };

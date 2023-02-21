@@ -11,7 +11,8 @@ const SearchComponent = () => {
   const handleSearch = (event) => {
     event.preventDefault();
     if (value) {
-      navigate("/search?" + value, { state: value, replace: true });
+      navigate("/search?query=" + value, { state: value, replace: true });
+      window.location.reload(false);
     }
   };
   return (

@@ -2,6 +2,7 @@ import { CircularProgress } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ResultsUI from "../components/ResultsUI";
+import SearchBar from "../components/SearchBar";
 import SearchComponent from "../components/SearchComponent";
 import "../styles/search_results.css";
 
@@ -39,7 +40,7 @@ const Search = () => {
 
   return (
     <div className="results_page">
-      <SearchComponent />
+      <SearchBar />
       <h2 className="results_for">Results for: "{state}"</h2>
       {isPending && (
         <div className="loading">

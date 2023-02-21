@@ -1,0 +1,42 @@
+.not_found {
+  height: 100vh;
+  width: 60%;
+  display: flex;
+  padding: 5rem;
+  flex-direction: column;
+  margin: 0px;
+  justify-content: center;
+}
+
+.not_found h2 {
+  font-size: 60px;
+  margin: 0px;
+}
+
+.not_found h3 {
+  font-size: 30px;
+}
+
+.not_found p {
+  color: rgb(160, 160, 160);
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+#dark .not_found h2,
+#dark .not_found h3 {
+  color: white;
+}
+
+.not_found .css-sghohy-MuiButtonBase-root-MuiButton-root {
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+  width: fit-content;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: 10px;
+}
+
+.not_found a {
+  color: white;
+}

@@ -3,11 +3,9 @@ import { BiSearchAlt } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import "../styles/searchBar.css";
 
-const SearchComponent = () => {
+const SearchBar = () => {
   const [value, setValue] = useState("");
-
   const navigate = useNavigate();
-
   const handleSearch = (event) => {
     event.preventDefault();
     if (value) {
@@ -35,4 +33,4 @@ const SearchComponent = () => {
   );
 };
 
-export default SearchComponent;
+export default SearchBar;

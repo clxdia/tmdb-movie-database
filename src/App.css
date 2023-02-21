@@ -41,9 +41,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(../src/assets/hero-movies.png);
-  background-size: cover;
   height: 50vh;
+  position: relative;
+}
+
+.hero {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 
 h1 {
@@ -54,6 +61,7 @@ h1 {
   width: fit-content;
   text-shadow: 0px 2.3px 10px rgba(0, 0, 0, 0.291),
     0px 18px 80px rgba(0, 0, 0, 0.45);
+  z-index: 3;
 }
 
 .empty {

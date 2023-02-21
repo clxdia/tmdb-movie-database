@@ -10,13 +10,13 @@ const SearchComponent = () => {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    if (value) {
+    if (value != null) {
       navigate("/search?query=" + value, { state: value, replace: true });
       window.location.reload(false);
     }
   };
   return (
-    <form onSubmit={handleSearch} className="search">
+    <form onSubmit={handleSearch} className="search" onr>
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}

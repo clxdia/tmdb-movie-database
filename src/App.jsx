@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 import Homepage from "./pages/Homepage";
 import Movies from "./pages/Movies";
@@ -19,11 +19,12 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import NotFound from "./pages/NotFound";
 import history from "./pages/history";
+import { useLocalStorage } from "usehooks-ts";
 
 export const ThemeContext = createContext(null);
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useLocalStorage("light", true);
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };

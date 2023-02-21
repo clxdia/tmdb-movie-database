@@ -1,5 +1,5 @@
 .trailers {
-  height: 40vh;
+  height: 400px;
   background-image: url(../assets/peaks.png);
   background-size: full;
 }
@@ -7,7 +7,7 @@
 .section_container {
   margin: auto;
   overflow-x: scroll;
-  height: 40vh;
+  height: 400px;
 }
 
 .trailers h3 {
@@ -34,8 +34,8 @@
 
 .video_container {
   background-size: cover;
-  width: 20rem;
-  height: 20vh;
+  width: 400px;
+  height: 200px;
   border-radius: 10px;
   align-items: center;
   display: flex;

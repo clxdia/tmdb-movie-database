@@ -32,9 +32,9 @@
 .swiper_box img {
   display: block;
   width: 200px;
-  height: 30vh;
-  min-height: 30vh;
-  max-height: 30vh;
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
   min-width: 200px;
   max-width: 200px;
   object-fit: cover;
@@ -44,7 +44,7 @@
 .linear-gradient {
   width: 100px;
   background-color: black;
-  height: 30vh;
+  height: 300px !important;
   position: absolute;
   z-index: 5;
   background: linear-gradient(90deg, transparent, #eaeaea);
@@ -84,4 +84,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .linear-gradient {
+    width: 50px;
+  }
 }

@@ -41,7 +41,7 @@
 .linear-gradient {
   width: 100px;
   background-color: black;
-  height: 30vh;
+  height: 300px;
   position: absolute;
   z-index: 5;
   background: linear-gradient(90deg, transparent, #eaeaea);
@@ -81,4 +81,10 @@
 
 .poster {
   position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  .linear-gradient {
+    width: 50px;
+  }
 }

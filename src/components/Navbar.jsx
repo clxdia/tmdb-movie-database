@@ -10,7 +10,7 @@ const Navbar = ({ toggleTheme, theme, setTheme }) => {
       <nav className="navbar">
         <div className="links_container">
           <h2>
-            <Link to="/">MFinder</Link>
+            <Link to="/">MovieFinder</Link>
           </h2>
           <ul className="navbar_links">
             <MenuItem className="MenuItem">

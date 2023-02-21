@@ -18,6 +18,7 @@ import "./styles/swiper.css";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import NotFound from "./pages/NotFound";
+import history from "./pages/history";
 
 export const ThemeContext = createContext(null);
 
@@ -50,7 +51,7 @@ const App = () => {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="App" id={theme}>
-        <RouterProvider router={router} history={History} />
+        <RouterProvider router={router} history={history} />
       </div>
     </ThemeContext.Provider>
   );

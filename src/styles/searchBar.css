@@ -4,20 +4,20 @@
   align-items: center;
   border-radius: 3rem;
   justify-content: start;
-  background: #16161a;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
-  -webkit-box-shadow: 5px 5px 7px #141418, -5px -5px 7px #18181d;
-  box-shadow: 5px 5px 7px #141418, -5px -5px 7px #18181d;
+  background: #fffffe;
+  box-shadow: 0px 2.3px 10px rgba(0, 0, 0, 0.291),
+    0px 18px 80px rgba(0, 0, 0, 0.45);
   overflow: hidden;
   height: 3.5rem;
   position: relative;
 }
 
-#light .search {
-  background: #fffffe;
-  box-shadow: 0px 2.3px 10px rgba(0, 0, 0, 0.291),
-    0px 18px 80px rgba(0, 0, 0, 0.45);
+#dark .search {
+  background: #16161a;
+  -webkit-box-shadow: 5px 5px 7px #141418, -5px -5px 7px #18181d;
+  box-shadow: 5px 5px 7px #141418, -5px -5px 7px #18181d;
 }
 
 .search input {
@@ -32,12 +32,11 @@
   outline: none;
   width: fit-content;
   color: #a1a1a1;
-  background: #16161a;
+  background: #fffffe;
 }
 
-#light .search input {
-  color: #a1a1a1;
-  background: #fffffe;
+#dark .search input {
+  background: #16161a;
 }
 
 .icon_container {

@@ -2,7 +2,6 @@ import { CircularProgress } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ResultsUI from "../components/ResultsUI";
-import SearchBar from "../components/SearchBar";
 import SearchComponent from "../components/SearchComponent";
 import "../styles/search_results.css";
 
@@ -20,9 +19,7 @@ const Search = () => {
     )
       .then((res) => {
         if (!res.ok) {
-          throw Error(
-            "Could not fetch the data from the api. Try again later."
-          );
+          throw Error("Could not fetch the data from the api.");
         }
         return res.json();
       })
@@ -43,31 +40,29 @@ const Search = () => {
       <SearchComponent />
       <h2 className="results_for">Results for: "{state}"</h2>
       {isPending && (
-        <div className="loading">
+        <section className="loading_results">
           <p>Loading...</p>
           <CircularProgress color="inherit" />
-        </div>
+        </section>
       )}
       {error && (
-        <div className="loading">
+        <section className="error_results">
           <h3>Something went wrong, please try again in a bit.</h3>
           <p>{error}</p>
-        </div>
+        </section>
       )}
       {films?.length > 0 ? (
-        <main className="results_container">
+        <section className="results_container">
           <div className="results">
             {films.map((film) => (
-              <div className="single_result">
-                <ResultsUI film={film} key={film.id} />
-              </div>
+              <ResultsUI film={film} key={film.id} />
             ))}
           </div>
-        </main>
+        </section>
       ) : (
-        <div className="empty">
-          <h2>No movies found</h2>
-        </div>
+        <section className="no_movies_found">
+          <h3>No movies found</h3>
+        </section>
       )}
     </div>
   );

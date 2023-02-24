@@ -14,7 +14,7 @@ const AsideComponent = ({
   link4,
 }) => {
   return (
-    <Paper className="aside_movies" elevation={7}>
+    <Paper className="aside_pages" elevation={7}>
       <Stack spacing={1}>
         <Button
           variant="outlined"

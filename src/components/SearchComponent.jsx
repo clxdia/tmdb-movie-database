@@ -1,3 +1,4 @@
+import { Paper } from "@mui/material";
 import React, { useState } from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
@@ -16,14 +17,14 @@ const SearchComponent = () => {
     }
   };
   return (
-    <form onSubmit={handleSearch} className="search" onr>
+    <form onSubmit={handleSearch} className="search">
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}
         className="search_input"
         placeholder="Search for movies, tv shows and more..."
       ></input>
-      <div className="icon_container" onClick={handleSearch}>
+      <div className="search_icon_container" onClick={handleSearch}>
         <BiSearchAlt
           className="search-icon"
           alt="search"

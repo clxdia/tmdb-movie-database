@@ -1,16 +1,16 @@
 import React from "react";
 
-import "../styles/movies.css";
-import SliderPages from "../components/SliderPages";
+import "../styles/pages.css";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import GradeIcon from "@mui/icons-material/Grade";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import AsideComponent from "../components/AsideComponent";
+import MediaPages from "../components/MediaPages";
 
 const TVShows = () => {
   return (
-    <main className="movies_homepage">
+    <main className="pages_main">
       <AsideComponent
         link1={"#now-playing"}
         title1="Airing Today"
@@ -21,29 +21,29 @@ const TVShows = () => {
         link4={"#now-popular"}
         title4="Now Popular"
       />
-      <div className="movie_lists">
-        <SliderPages
+      <div className="pages_all_sliders_container">
+        <MediaPages
           id="now-playing"
           category="tv"
           string="airing_today"
           title="Airing Today"
           icon={<LiveTvIcon />}
         />
-        <SliderPages
+        <MediaPages
           id="on-air"
           category="tv"
           string="on_the_air"
           title="On The Air"
           icon={<VideocamIcon />}
         />
-        <SliderPages
+        <MediaPages
           id="top-rated"
           category="tv"
           string="top_rated"
           title="Top Rated"
           icon={<GradeIcon />}
         />
-        <SliderPages
+        <MediaPages
           id="now-popular"
           category="tv"
           string="popular"

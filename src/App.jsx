@@ -12,9 +12,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import History from "./pages/history";
 import "./styles/navbar.css";
-import "./styles/swiper.css";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import NotFound from "./pages/NotFound";

@@ -1,19 +1,25 @@
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap");
 @import url("https://api.fontshare.com/v2/css?f[]=quilon@400&display=swap");
 
-.navbar {
+.navbar_container {
   position: fixed;
   z-index: 10;
   width: 100%;
   background-color: #001e3c;
-  padding: 1rem;
-  padding-left: 1.5rem;
+  padding: 15px 0px 15px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 90%;
   display: flex;
   align-items: center;
 }
 
 .navbar_links {
-  padding-left: 10px;
+  padding-left: 15px;
+  margin-top: 3px;
 }
 
 .links_container {
@@ -23,7 +29,7 @@
 
 .navbar ul {
   display: flex;
-  gap: 5px;
+  gap: 1px;
   align-items: flex-end !important;
 }
 
@@ -31,7 +37,8 @@
   color: white;
 }
 
-.navbar h2 {
+.logo_desktop,
+.logo_mobile {
   font-size: 1.8rem;
   font-family: "Quilon", sans-serif;
   letter-spacing: 0.9px;
@@ -41,12 +48,17 @@
   -webkit-text-fill-color: transparent;
 }
 
+.logo_mobile {
+  display: none;
+}
+
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
   background-color: #00264c !important;
 }
 
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
   border-radius: 5px !important;
+  padding: 8px 10px 8px 10px !important;
 }
 
 a,
@@ -64,7 +76,7 @@ ul {
   height: fit-content;
   justify-content: end;
   width: 100%;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .switch {
@@ -90,4 +102,15 @@ ul {
 
 .sun {
   margin-left: 8px;
+}
+
+@media screen and (max-width: 500px) {
+  .logo_mobile {
+    font-size: 1.6rem;
+    display: block;
+  }
+
+  .logo_desktop {
+    display: none;
+  }
 }

@@ -1,4 +1,4 @@
-.movies_homepage {
+.pages_main {
   padding-top: 6rem;
   display: flex;
   width: 95%;
@@ -7,7 +7,9 @@
   position: relative;
 }
 
-.aside_movies {
+/* ----------- ASIDE COMPONENT ------------- */
+
+.aside_pages {
   width: 280px;
   min-width: 280px;
   border-radius: 20px;
@@ -18,7 +20,7 @@
   padding: 10px;
 }
 
-#dark .aside_movies {
+#dark .aside_pages {
   background-color: #001e3c;
 }
 
@@ -26,9 +28,9 @@
   border-color: black !important;
 }
 
-.aside_movies a,
-ul,
-li {
+.aside_pages a,
+.aside_pages ul,
+.aside_pages li {
   color: black;
 }
 
@@ -47,9 +49,9 @@ li {
   color: white;
 }
 
-#dark .aside_movies a,
-li,
-ul {
+#dark .aside_pages a,
+#dark .aside_pages ul,
+#dark .aside_pages li {
   color: white;
 }
 
@@ -58,7 +60,13 @@ ul {
   font-size: 20px;
 }
 
-.title_movies {
+/* -------------------- CATEGORIES SLIDERS -------------------- */
+
+.pages_all_sliders_container {
+  overflow-x: hidden;
+}
+
+.category_title {
   padding-bottom: 1.5rem;
   font-size: 25px;
   display: flex;
@@ -66,16 +74,38 @@ ul {
   gap: 10px;
 }
 
-#dark .title_movies {
+#dark .category_title {
   color: white;
 }
 
-.movie_lists {
-  overflow-x: hidden;
+.pages_slider_container {
+  width: 100%;
+  position: relative;
+}
+
+.pages_slider,
+.pages_skeleton {
+  width: 100%;
+  min-width: 50vw;
+  margin: auto;
+  justify-content: flex-start;
+  height: auto;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: flex-start;
+  scrollbar-width: none;
+}
+
+.pages_skeleton span {
+  min-width: 200px;
+  min-height: 280px;
+  margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 1200px) {
-  .aside_movies {
+  .aside_pages {
     display: none;
   }
 }

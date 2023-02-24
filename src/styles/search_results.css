@@ -1,3 +1,5 @@
+/* --------------- PAGE WRAPPER --------------- */
+
 .results_page {
   width: 95%;
   margin: auto;
@@ -8,23 +10,19 @@
   align-items: center;
 }
 
-.results_page h2 {
+.results_for {
   text-align: center;
   margin-top: 30px;
 }
 
-#dark .results_page h2 {
+#dark .results_for {
   color: white;
 }
 
-.rating_circle {
-  background: linear-gradient(90deg, #7f5af0, #2cb67d);
-  border-radius: 2rem;
-  padding: 2px;
-  padding-left: 8px;
-  padding-right: 8px;
-  width: fit-content;
-  font-size: 13px;
+/* --------------- RESULTS --------------- */
+
+.results_container {
+  padding-top: 2rem;
 }
 
 .results {
@@ -34,93 +32,50 @@
 }
 
 .single_result {
-  width: 100%;
-  height: auto;
-}
-
-.single_result_container {
   width: 800px;
-  height: 30vh;
+  height: 300px;
   background-color: rgb(255, 255, 255);
   margin-bottom: 20px;
   display: flex;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0px 0.5px 2.2px rgba(0, 0, 0, 0.011),
-    0px 1.2px 5.3px rgba(0, 0, 0, 0.016), 0px 2.3px 10px rgba(0, 0, 0, 0.02),
-    0px 4px 17.9px rgba(0, 0, 0, 0.024), 0px 7.5px 33.4px rgba(0, 0, 0, 0.029),
-    0px 18px 80px rgba(0, 0, 0, 0.04);
   position: relative;
 }
 
-#dark .single_result_container {
-  background-color: black;
+#dark .single_result {
+  background-color: #001e3c;
 }
 
-.single_result_container img {
+.single_result img {
   width: 200px;
-  height: 30vh;
-  min-height: 30vh;
-  max-height: 30vh;
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
   min-width: 200px;
   max-width: 200px;
   object-fit: cover;
 }
 
-.single_result_container p {
+.single_result p {
   color: black;
 }
 
-#dark .single_result_container p {
+#dark .single_result p {
   color: white;
 }
 
-.results_container {
-  padding-top: 2rem;
-}
-
-.search_results {
-  width: 71%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem 1.75rem;
-  border-radius: 3rem;
-  background: #fffffe;
-  -webkit-box-shadow: 5px 5px 7px #4d4d4d, -5px -5px 7px #424242;
-  box-shadow: 5px 5px 7px #6e6e6e, -5px -5px 7px #565656;
-}
-
-#dark .search_results {
-  background: #16161a;
-  -webkit-box-shadow: 5px 5px 7px #141418, -5px -5px 7px #18181d;
-  box-shadow: 5px 5px 7px #141418, -5px -5px 7px #18181d;
-}
-
-.search_results input {
-  flex: 1;
-  border: none;
-  font-size: 1.5rem;
-  font-family: var(--font-raleway);
-  font-weight: 500;
-  padding-right: 1rem;
-  outline: none;
-  color: #a1a1a1;
-  background: #fffffe;
-}
-
-#dark .search_results input {
-  color: #a1a1a1;
-  background: #16161a;
-}
-
-.gradient_results {
+.fade_effect_results {
   left: 6.3rem;
+  top: 0;
   background: linear-gradient(90deg, transparent, #ffffff);
 }
 
-#dark .gradient_results {
-  background: linear-gradient(90deg, transparent, black);
+#dark .fade_effect_results {
+  background: linear-gradient(90deg, transparent, #001e3c);
+}
+
+.bg_desktop {
+  display: block;
 }
 
 .result_desc {
@@ -134,8 +89,11 @@
 
 .title_date {
   display: flex;
-
   gap: 8px;
+}
+
+.title_date_mobile {
+  display: none;
 }
 
 .date {
@@ -151,6 +109,10 @@
   color: #a5a5a5;
 }
 
+#dark .Rating .css-1c99szj-MuiRating-icon {
+  color: #6a6a6a;
+}
+
 .genre {
   font-size: 13px;
 }
@@ -163,35 +125,148 @@
   align-items: center;
 }
 
-.desc {
+.desc_container {
   color: #6a6a6a !important;
   overflow-y: scroll;
   height: 15vh;
 }
 
-#dark .desc {
+#dark .desc_container {
   color: #d7d7d7 !important;
 }
 
-.loading {
+/* ------------------ LOADING PAGE -------------- */
+
+.loading_results {
   height: 100vh;
   font-size: 20px;
   text-align: center;
 }
 
-.loading p {
+.loading_results p {
   padding-top: 5rem;
   margin-bottom: 5rem;
 }
 
-#dark .loading {
+#dark .loading_results {
   color: white;
 }
 
-.empty {
-  height: 100vh;
+/* ------------------ ERROR -------------- */
+
+.error_results {
+  margin-top: 50px;
+  text-align: center;
 }
 
-#dark .Rating .css-1c99szj-MuiRating-icon {
+#dark .error_results {
+  color: white;
+}
+
+.error_results > p {
+  margin-top: 10px;
   color: #6a6a6a;
+}
+
+/* ------------------ NO MOVIES FOUND -------------- */
+
+.no_movies_found {
+  height: 100vh;
+  font-size: 20px;
+  color: #6a6a6a;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 850px) {
+  .results_container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .results {
+    width: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .single_result {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: block;
+    width: 200px;
+    position: relative;
+    margin-bottom: 0px;
+  }
+
+  .fade_effect_results {
+    display: none;
+  }
+
+  .result_desc {
+    padding: 0px;
+    padding-top: 4px;
+    display: block;
+    text-align: center;
+  }
+
+  .title_date,
+  .genre_rating {
+    display: block;
+  }
+
+  .title_date > .title_film {
+    font-size: 16px;
+  }
+
+  .result_desc {
+    position: absolute;
+    top: 0;
+    padding: 0;
+  }
+
+  .title_date {
+    display: none;
+  }
+
+  .title_date_mobile {
+    text-align: center;
+    width: 200px;
+    max-width: 200px;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .date {
+    margin-top: 3px;
+  }
+
+  #dark .title_date_mobile {
+    color: white;
+  }
+
+  .bg {
+    background: linear-gradient(to top, #001e3cba, #001e3c);
+    height: 300px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .desc_container {
+    height: 250px;
+    font-size: 14px;
+  }
+
+  .genre_rating {
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+
+  .bg_desktop {
+    display: none;
+  }
 }

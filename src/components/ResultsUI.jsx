@@ -1,7 +1,10 @@
-import { Rating } from "@mui/material";
+import { Paper, Rating } from "@mui/material";
 import React from "react";
+import { useState } from "react";
 
 const ResultsUI = ({ film }) => {
+  const [open, setOpen] = useState();
+
   for (let id in film.genre_ids) {
     if (film.genre_ids[id] === 28) {
       film.genre_ids[id] = `Action`;
@@ -63,44 +66,72 @@ const ResultsUI = ({ film }) => {
   }
 
   return (
-    <div className="single_result_container">
-      <img
-        src={
-          film.poster_path !== null
-            ? "https://www.themoviedb.org/t/p/w1280/" + film.poster_path
-            : "https://via.placeholder.com/400"
-        }
-      ></img>
-
-      <div className="linear-gradient gradient_results"></div>
-      <div className="result_desc">
-        <div className="title_date">
-          <p className="title_film">{film.title || film.name}</p>
-          <p className="date">&#40;{film.release_date.slice(0, 4)}&#41;</p>
+    <div className="single">
+      <Paper
+        className="single_result"
+        elevation={7}
+        key={film.id}
+        onClick={() => setOpen(!open)}
+      >
+        <img
+          src={
+            film.poster_path !== null
+              ? "https://www.themoviedb.org/t/p/w1280/" + film.poster_path
+              : "https://via.placeholder.com/400"
+          }
+        ></img>
+        <div className="fade_effect fade_effect_results"></div>
+        <div className="result_desc">
+          <div className="title_date">
+            <p className="title_film">{film.title || film.name}</p>
+            <p className="date">&#40;{film.release_date.slice(0, 4)}&#41;</p>
+          </div>
+          {open ? (
+            <div className="bg">
+              <div className="genre_rating">
+                <Rating
+                  name="read-only"
+                  className="Rating"
+                  value={Math.round((film.vote_average / 2) * 10) / 10}
+                  precision={0.5}
+                  readOnly
+                />
+                <p className="genre">
+                  {film.genre_ids[0]}
+                  <span> {film.genre_ids[1]}</span>
+                  <span> {film.genre_ids[2]}</span>
+                </p>
+              </div>
+              <div className="desc_container">
+                <p>{film.overview}</p>
+              </div>
+            </div>
+          ) : (
+            <div className="bg_desktop">
+              <div className="genre_rating">
+                <Rating
+                  name="read-only"
+                  className="Rating"
+                  value={Math.round((film.vote_average / 2) * 10) / 10}
+                  precision={0.5}
+                  readOnly
+                />
+                <p className="genre">
+                  {film.genre_ids[0]}
+                  <span> {film.genre_ids[1]}</span>
+                  <span> {film.genre_ids[2]}</span>
+                </p>
+              </div>
+              <div className="desc_container">
+                <p>{film.overview}</p>
+              </div>
+            </div>
+          )}
         </div>
-
-        <div className="genre_rating">
-          {/* <div className="rating_circle">
-            {Math.round(film.vote_average * 10) / 10} / 10
-          </div> */}
-
-          <Rating
-            name="read-only"
-            className="Rating"
-            value={Math.round((film.vote_average / 2) * 10) / 10}
-            precision={0.5}
-            readOnly
-          />
-
-          <p className="genre">
-            {film.genre_ids[0]}
-            <span> {film.genre_ids[1]}</span>
-            <span> {film.genre_ids[2]}</span>
-          </p>
-        </div>
-        <div className="desc">
-          <p className="descj">{film.overview}</p>
-        </div>
+      </Paper>
+      <div className="title_date_mobile">
+        <p className="title_film">{film.title || film.name}</p>
+        <p className="date">&#40;{film.release_date.slice(0, 4)}&#41;</p>
       </div>
     </div>
   );

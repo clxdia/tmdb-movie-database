@@ -1,26 +1,26 @@
 import { Skeleton } from "@mui/material";
-import React, { useEffect, useRef, useState } from "react";
-import SliderHomepage from "./SliderHomepage";
+import React, { useEffect, useState } from "react";
+import SliderPages from "./SliderPages";
 
-export default function TrendingHomepage({ category, title }) {
-  const [trending, getTrending] = useState(null);
+export default function MediaPages({ category, string, title, icon, id }) {
+  const [movies, getMovies] = useState(null);
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(true);
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/trending/${category}/day?api_key=${
+      `https://api.themoviedb.org/3/${category}/${string}?api_key=${
         import.meta.env.VITE_API_KEY
-      }`
+      }&page=1`
     )
       .then((res) => {
         if (!res.ok) {
-          throw Error("could not fetch the data from the api.");
+          throw Error("could not fetch the data from the api");
         }
         return res.json();
       })
       .then((data) => {
-        getTrending(data.results);
+        getMovies(data.results);
         setIsPending(false);
         setError(null);
       })
@@ -29,11 +29,15 @@ export default function TrendingHomepage({ category, title }) {
         setError(err.message);
       });
   }, []);
+
   return (
-    <section className="trending">
-      <h3 className="trending_title">{title}</h3>
+    <>
+      <h3 className="category_title" id={id}>
+        {icon}
+        {title}
+      </h3>
       {isPending && (
-        <div className="skeleton_homepage">
+        <div className="pages_skeleton">
           <Skeleton variant="rounded" width={200} height={280} />
           <Skeleton variant="rounded" width={200} height={280} />
           <Skeleton variant="rounded" width={200} height={280} />
@@ -50,12 +54,12 @@ export default function TrendingHomepage({ category, title }) {
         </div>
       )}
       {error && (
-        <div className="error_homepage">
+        <div className="error">
           <h3>Something went wrong, please try again in a bit.</h3>
           <p>{error}</p>
         </div>
       )}
-      {trending && <SliderHomepage trending={trending} key={trending.id} />}
-    </section>
+      {movies && <SliderPages movies={movies} key={movies.id} />}
+    </>
   );
 }

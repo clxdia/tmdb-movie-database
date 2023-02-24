@@ -197,6 +197,7 @@
     scrollbar-width: none;
     height: 270px;
     padding-top: 20px;
+    overflow-y: hidden;
   }
 
   .link_container {

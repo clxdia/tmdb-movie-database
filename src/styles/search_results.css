@@ -184,7 +184,7 @@
     justify-content: center;
   }
 
-  .Rating .css-1c99szj-MuiRating-icon {
+  .css-1c99szj-MuiRating-icon {
     color: #6a6a6a;
   }
 
@@ -288,6 +288,10 @@
     width: 300px;
     position: relative;
     margin-bottom: 0px;
+  }
+
+  .css-1c99szj-MuiRating-icon {
+    color: #6a6a6a;
   }
 
   .single_result img {

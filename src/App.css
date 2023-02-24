@@ -97,7 +97,7 @@ h2 {
   z-index: 5;
   background: linear-gradient(90deg, transparent, #eaeaea);
   right: 0;
-  top: 10px;
+  top: 0px;
 }
 
 #dark .fade_effect {

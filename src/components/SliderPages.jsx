@@ -1,8 +1,5 @@
 import React from "react";
 
-import "../styles/slider.css";
-import "../styles/small_slider.css";
-
 const SliderPages = ({ movies }) => {
   return (
     <div className="pages_slider_container">
@@ -12,7 +9,7 @@ const SliderPages = ({ movies }) => {
             <img
               src={"https://www.themoviedb.org/t/p/w1280/" + movie.poster_path}
             ></img>
-            <p className="title">{movie.title || movie.name}</p>
+            <p className="media_title">{movie.title || movie.name}</p>
           </div>
         ))}
       </div>

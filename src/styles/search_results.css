@@ -184,6 +184,10 @@
     justify-content: center;
   }
 
+  .Rating .css-1c99szj-MuiRating-icon {
+    color: #6a6a6a;
+  }
+
   .results {
     width: auto;
     display: flex;
@@ -261,6 +265,10 @@
     font-size: 14px;
   }
 
+  .desc_container p {
+    color: white;
+  }
+
   .genre_rating {
     margin-bottom: 0px;
     margin-top: 10px;
@@ -268,5 +276,41 @@
 
   .bg_desktop {
     display: none;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .single_result {
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: block;
+    width: 300px;
+    position: relative;
+    margin-bottom: 0px;
+  }
+
+  .single_result img {
+    height: 400px;
+    width: 300px;
+    min-height: 400px;
+    max-height: 400px;
+    min-width: 300px;
+    max-width: 300px;
+    object-fit: cover;
+  }
+
+  .title_date_mobile {
+    width: 100%;
+    width: 300px;
+    max-width: 300px;
+  }
+  .bg {
+    height: 400px;
+  }
+
+  .desc_container {
+    height: 450px;
+    font-size: 17px;
   }
 }

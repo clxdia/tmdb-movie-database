@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../styles/trailers.css";
 import { FaPlay } from "react-icons/fa";
 import Trailer from "./Trailer";
 import { Paper } from "@mui/material";

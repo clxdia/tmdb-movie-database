@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../styles/trailers.css";
 
 const Trailer = ({ media_type, media_id }) => {
   const [link, getLink] = useState(null);

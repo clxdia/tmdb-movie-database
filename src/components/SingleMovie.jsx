@@ -74,7 +74,7 @@ const SingleItem = ({ category }) => {
             <div className="shadow-gradient-bio"></div>
             <div className="single-item_card">
               <h4>
-                {data.title} &#40;{data.release_date?.slice(0, 4)}&#41;
+                {data.original_title} &#40;{data.release_date?.slice(0, 4)}&#41;
               </h4>
               <Divider className="divider" />
               <div className="single-item_bio">
@@ -86,12 +86,12 @@ const SingleItem = ({ category }) => {
                   ></img>
                 </div>
                 <div className="sigle-item_desc">
-                  <h5 className="single-item_title">{data.original_title}</h5>
+                  <h5 className="single-item_title">{data.title}</h5>
                   <p className="tagline">{data.tagline}</p>
                   <Divider className="divider" />
                   <div className="watchers">
                     <RemoveRedEyeIcon />
-                    {data.vote_count}
+                    <p>{data.vote_count}</p>
                     <Rating
                       name="read-only"
                       className="Rating"
@@ -100,7 +100,7 @@ const SingleItem = ({ category }) => {
                       readOnly
                     />
                     <Divider orientation="vertical" flexItem />
-                    {data.runtime}min{" "}
+                    <p>{data.runtime}min </p>
                     <Divider orientation="vertical" flexItem />
                     {data.genres.map((genre, index) => (
                       <span key={genre.id}>
@@ -109,7 +109,7 @@ const SingleItem = ({ category }) => {
                       </span>
                     ))}
                     <Divider orientation="vertical" flexItem />
-                    {data.release_date.slice(0, 4)}
+                    <p>{data.release_date.slice(0, 4)}</p>
                   </div>
                   <Divider className="divider" />
                   <div className="single-item_details-cast">
@@ -156,6 +156,7 @@ const SingleItem = ({ category }) => {
           <div className="shadow-gradient_single-item"></div>
           {recs && (
             <div className="pages_slider_container recs">
+              <h5>Similar Movies</h5>
               <div className="pages_slider">
                 {recs.map((rec) => (
                   <Link

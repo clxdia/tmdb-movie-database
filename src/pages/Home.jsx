@@ -3,7 +3,7 @@ import Trailers from "../components/Trailers";
 import Celebrities from "../components/Celebrities";
 import "../styles/home.css";
 import Trending from "../components/Trending";
-import { Rating } from "@mui/material";
+import { Button, Rating } from "@mui/material";
 
 const Home = () => {
   const [trending, getTrending] = useState(null);
@@ -60,6 +60,9 @@ const Home = () => {
                 <p>Score: {trending[0].vote_average.toFixed(1)}</p>
               </div>
               <p>{trending[0].overview}</p>
+              <Button variant="contained" className="button_view">
+                View
+              </Button>
             </div>
           </div>
           <div className="shadow-gradient"></div>

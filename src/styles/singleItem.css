@@ -22,6 +22,28 @@ h5 {
   margin-bottom: 3px;
 }
 
+.single-item_page h5,
+.single-item_page p,
+.single-item_page h4,
+.single-item_page span {
+  color: black !important;
+}
+
+#dark .single-item_page h5,
+#dark .single-item_page p,
+#dark .single-item_page h4,
+#dark .single-item_page span {
+  color: white !important;
+}
+
+.watchers svg {
+  fill: black;
+}
+
+#dark .watchers svg {
+  fill: white;
+}
+
 .tagline {
   padding-bottom: 15px;
   font-size: 15px;
@@ -60,11 +82,15 @@ h5 {
 
 .shadow-gradient_single-item {
   width: 100%;
-  background: linear-gradient(360deg, #16161a, #03ff9600);
-  height: 30vh;
-  margin-top: -280px;
+  background: linear-gradient(360deg, rgb(220, 220, 220), #03ff9600);
+  height: 20vh;
+  margin-top: -190px;
   z-index: 10;
   position: relative;
+}
+
+#dark .shadow-gradient_single-item {
+  background: linear-gradient(360deg, #16161a, #03ff9600);
 }
 
 .MuiDivider-fullWidth {

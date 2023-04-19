@@ -1,0 +1,31 @@
+.slider {
+  width: 100%;
+  margin-left: 0%;
+}
+
+.pages_slider,
+.pages_skeleton {
+  width: 100%;
+  min-width: 50vw;
+  margin: auto;
+  justify-content: flex-start;
+  height: auto;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: flex-start;
+  scrollbar-width: none;
+}
+
+.pages_skeleton span {
+  min-width: 200px;
+  min-height: 280px;
+  margin-bottom: 5rem;
+}
+
+.pages_slider_container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}

@@ -1,15 +1,15 @@
 import { Skeleton } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import SliderPages from "./SliderPages";
+import { Link } from "react-router-dom";
 
-export default function MediaPages({ category, string, title, icon, id }) {
+export default function MediaPages({ category, title }) {
   const [movies, getMovies] = useState(null);
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(true);
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/${category}/${string}?api_key=${
+      `https://api.themoviedb.org/3/trending/${category}/day?api_key=${
         import.meta.env.VITE_API_KEY
       }&page=1`
     )
@@ -31,11 +31,8 @@ export default function MediaPages({ category, string, title, icon, id }) {
   }, []);
 
   return (
-    <>
-      <h3 className="category_title" id={id}>
-        {icon}
-        {title}
-      </h3>
+    <div className="slider slider_tvshows">
+      <h3 className="heading">Trending now in {title}</h3>
       {isPending && (
         <div className="pages_skeleton">
           <Skeleton variant="rounded" width={200} height={280} />
@@ -59,7 +56,26 @@ export default function MediaPages({ category, string, title, icon, id }) {
           <p>{error}</p>
         </div>
       )}
-      {movies && <SliderPages movies={movies} key={movies.id} />}
-    </>
+      {movies && (
+        <div className="pages_slider_container pages_slider_container_tvshow">
+          <div className="pages_slider pages_slider_tvshows">
+            {movies.map((movie) => (
+              <Link
+                to={`/${category}/${movie.id}`}
+                className="slider_single_box"
+                key={movie.id}
+              >
+                <img
+                  src={
+                    "https://www.themoviedb.org/t/p/w1280/" + movie.poster_path
+                  }
+                ></img>
+                <p className="media_title">{movie.title || movie.name}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
   );
 }

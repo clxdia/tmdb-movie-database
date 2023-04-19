@@ -3,7 +3,7 @@
 
 .navbar_container {
   position: fixed;
-  z-index: 10;
+  z-index: 80;
   width: 100%;
   background-color: #001e3c;
   padding: 15px 0px 15px 0px;
@@ -12,7 +12,7 @@
 }
 
 .navbar {
-  width: 90%;
+  width: 95%;
   display: flex;
   align-items: center;
 }
@@ -70,6 +70,30 @@ ul {
   letter-spacing: 0.9px;
 }
 
+.search-bar {
+  padding: 17px;
+  padding-left: 20px;
+  padding-right: 60px;
+  width: 30rem;
+  height: 15px;
+  border-radius: 100px;
+  border: #00264c;
+  border-style: solid;
+  border-width: 1px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar:nth-child(1) {
+  color: #2cb67d;
+}
+
+.search-bar p {
+  color: grey;
+  font-size: 13px;
+}
+
 .switch_container {
   align-items: center !important;
   display: flex;
@@ -102,6 +126,11 @@ ul {
 
 .sun {
   margin-left: 8px;
+}
+
+.main-page {
+  display: flex;
+  width: 100%;
 }
 
 @media screen and (max-width: 500px) {

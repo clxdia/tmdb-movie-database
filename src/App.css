@@ -4,8 +4,8 @@
 @import url("https://api.fontshare.com/v2/css?f[]=quilon@400&display=swap");
 
 * {
-  margin: 0;
   border: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -28,15 +28,12 @@ body {
 }
 
 .App {
-  height: auto;
+  height: 250vh;
+  background-color: rgba(220, 220, 220);
 }
 
 #dark {
   background-color: #16161a;
-}
-
-#light {
-  background-color: #eaeaea;
 }
 
 h1 {
@@ -53,6 +50,33 @@ h1 {
 h2 {
   width: 96%;
   margin: auto;
+}
+
+.media_title {
+  color: rgb(28, 21, 53);
+}
+
+#dark .media_title {
+  color: white;
+}
+
+.heading {
+  position: relative;
+  z-index: 10;
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 15px;
+  color: rgb(28, 21, 53);
+}
+
+.bio {
+  color: rgb(28, 21, 53);
+}
+
+#dark .heading,
+#dark .bio,
+#dark .bio_movies {
+  color: white;
 }
 
 .media_title {
@@ -73,8 +97,6 @@ h2 {
   flex-direction: column;
   flex-wrap: nowrap;
   border-radius: 10px;
-  min-width: 200px !important;
-  width: 200px !important;
 }
 
 .slider_single_box img {

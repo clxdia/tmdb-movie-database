@@ -1,0 +1,59 @@
+.movies_grid {
+  display: flex;
+  padding-top: 20px;
+  gap: 1vw;
+  margin: auto;
+  margin-left: 8%;
+  flex-wrap: wrap;
+
+  height: fit-content;
+}
+
+.slider_single_box_genres {
+  width: 12vw;
+  height: 22vw;
+}
+
+.slider_single_box_genres img {
+  width: 12vw;
+  height: 18vw;
+  min-width: 12vw;
+  min-height: 18vw;
+  max-width: 12vw;
+  min-height: 18vw;
+}
+
+.button_genres {
+  width: 100%;
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+}
+
+.genres_box {
+  padding-top: 40px;
+  margin-left: 8%;
+  width: 90%;
+}
+
+.heading_genres {
+  margin-left: 8%;
+  width: auto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.genres_box ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: center;
+  margin: auto;
+}
+
+.genres_box li {
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+  border-radius: 15px;
+}

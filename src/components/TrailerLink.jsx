@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Trailer = ({ media_type, media_id }) => {
+const TrailerLink = ({ media_type, media_id }) => {
   const [link, getLink] = useState(null);
 
   useEffect(() => {
@@ -31,4 +31,4 @@ const Trailer = ({ media_type, media_id }) => {
   );
 };
 
-export default Trailer;
+export default TrailerLink;

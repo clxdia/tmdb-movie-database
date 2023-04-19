@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { FaPlay } from "react-icons/fa";
-import Trailer from "./Trailer";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
+import TrailerLink from "./TrailerLink";
 import { Paper } from "@mui/material";
+
+import "../styles/trailers.css";
 
 const Trailers = () => {
   const [medias, getMedias] = useState(null);
@@ -22,11 +24,11 @@ const Trailers = () => {
 
   return (
     <section className="trailers">
-      <h3 className="title">Latest Trailers</h3>
+      <h3 className="heading">Latest Trailers</h3>
       <div className="videos_container">
         {medias &&
           medias.map((media) => (
-            <div>
+            <div key={media.id}>
               <Paper
                 elevation={7}
                 className="video_container"
@@ -37,8 +39,11 @@ const Trailers = () => {
                   })`,
                 }}
               >
-                <Trailer media_type={media.media_type} media_id={media.id} />
-                <FaPlay size={40} />
+                <TrailerLink
+                  media_type={media.media_type}
+                  media_id={media.id}
+                />
+                <PlayCircleOutlineIcon fontSize="large" />
               </Paper>
               <p className="media_title">{media.name || media.title}</p>
             </div>

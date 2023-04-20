@@ -4,6 +4,7 @@ import Celebrities from "../components/Celebrities";
 import "../styles/home.css";
 import Trending from "../components/Trending";
 import { Button, Rating } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [trending, getTrending] = useState(null);
@@ -60,9 +61,11 @@ const Home = () => {
                 <p>Score: {trending[0].vote_average.toFixed(1)}</p>
               </div>
               <p>{trending[0].overview}</p>
-              <Button variant="contained" className="button_view">
-                View
-              </Button>
+              <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>
+                <Button variant="contained" className="button_view">
+                  View
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="shadow-gradient"></div>

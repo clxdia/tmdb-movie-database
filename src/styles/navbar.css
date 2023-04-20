@@ -1,6 +1,15 @@
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap");
 @import url("https://api.fontshare.com/v2/css?f[]=quilon@400&display=swap");
 
+.navbar-home {
+  display: none;
+}
+
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
 .navbar_container {
   position: fixed;
   z-index: 80;
@@ -12,9 +21,22 @@
 }
 
 .navbar {
-  width: 95%;
   display: flex;
+  position: fixed;
+  z-index: 99;
+  justify-content: space-between;
   align-items: center;
+}
+
+/* NAVBAR OPEN */
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+  background-color: #001e3c !important;
+}
+
+.css-163su90-MuiList-root {
+  display: flex !important;
+  gap: 20px;
+  flex-direction: column;
 }
 
 .navbar_links {
@@ -97,16 +119,42 @@ ul {
 .switch_container {
   align-items: center !important;
   display: flex;
+  justify-content: center;
   height: fit-content;
-  justify-content: end;
   width: 100%;
-  margin-right: 10px;
+}
+
+.css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase,
+.Mui-checked,
+.MuiSwitch-track {
+  background-color: #444;
+}
+
+.MuiSwitch-thumb {
+  background-color: gray;
+}
+
+.MuiSwitch-track {
+  background-color: #444;
+}
+
+.Mui-checked .MuiSwitch-thumb {
+  background-color: gray;
+  background-image: url("path/to/moon.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: center;
+}
+
+.MuiSwitch-colorSecondary.Mui-checked .MuiSwitch-thumb {
+  background-image: url("path/to/sun.svg");
 }
 
 .switch {
   align-items: center !important;
   display: flex;
   flex-direction: column;
+  transform: rotate(90deg);
 }
 
 .react-switch-bg div {
@@ -133,13 +181,8 @@ ul {
   width: 100%;
 }
 
-@media screen and (max-width: 500px) {
-  .logo_mobile {
-    font-size: 1.6rem;
+@media screen and (max-width: 900px) {
+  .navbar-home {
     display: block;
-  }
-
-  .logo_desktop {
-    display: none;
   }
 }

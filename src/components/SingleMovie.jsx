@@ -12,6 +12,9 @@ const SingleItem = ({ category }) => {
   const [recs, getRecs] = useState();
 
   useEffect(() => {
+    getData(null); // reset data to null when category changes
+    setIsPending(true); // set isPending to true when category changes
+    setError(null); // reset error when category changes
     fetch(
       `https://api.themoviedb.org/3/${category}/${id}?api_key=${
         import.meta.env.VITE_API_KEY
@@ -32,7 +35,7 @@ const SingleItem = ({ category }) => {
         setIsPending(false);
         setError(err.message);
       });
-  }, [id]);
+  }, [id, category]);
 
   useEffect(() => {
     fetch(
@@ -56,8 +59,6 @@ const SingleItem = ({ category }) => {
         setError(err.message);
       });
   }, [id]);
-
-  console.log(data);
 
   return (
     <div className="single-item_page">

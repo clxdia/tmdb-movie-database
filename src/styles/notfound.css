@@ -3,6 +3,7 @@
   width: 60%;
   display: flex;
   padding: 5rem;
+  margin-left: 50px !important;
   flex-direction: column;
   margin: 0px;
   justify-content: center;

@@ -38,29 +38,6 @@ const Genres = ({ category }) => {
     fetch(
       `https://api.themoviedb.org/3/discover/${category}?api_key=${
         import.meta.env.VITE_API_KEY
-      }&language=en-US&sort_by=vote_count.desc&include_adult=false&include_video=false&page=2`
-    )
-      .then((res) => {
-        if (!res.ok) {
-          throw Error("could not fetch the data from the api");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        getMovies((prevMovies) => [...prevMovies, ...data.results]);
-        setIsPending(false);
-        setError(null);
-      })
-      .catch((err) => {
-        setIsPending(false);
-        setError(err.message);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/discover/${category}?api_key=${
-        import.meta.env.VITE_API_KEY
       }&language=en-US&sort_by=vote_count.desc&include_adult=false&include_video=false&page=3`
     )
       .then((res) => {
@@ -85,52 +62,6 @@ const Genres = ({ category }) => {
       `https://api.themoviedb.org/3/discover/${category}?api_key=${
         import.meta.env.VITE_API_KEY
       }&language=en-US&sort_by=vote_count.desc&include_adult=false&include_video=false&page=4`
-    )
-      .then((res) => {
-        if (!res.ok) {
-          throw Error("could not fetch the data from the api");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        getMovies((prevMovies) => [...prevMovies, ...data.results]);
-        setIsPending(false);
-        setError(null);
-      })
-      .catch((err) => {
-        setIsPending(false);
-        setError(err.message);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/discover/${category}?api_key=${
-        import.meta.env.VITE_API_KEY
-      }&language=en-US&sort_by=vote_count.desc&include_adult=false&include_video=false&page=5`
-    )
-      .then((res) => {
-        if (!res.ok) {
-          throw Error("could not fetch the data from the api");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        getMovies((prevMovies) => [...prevMovies, ...data.results]);
-        setIsPending(false);
-        setError(null);
-      })
-      .catch((err) => {
-        setIsPending(false);
-        setError(err.message);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/discover/${category}?api_key=${
-        import.meta.env.VITE_API_KEY
-      }&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`
     )
       .then((res) => {
         if (!res.ok) {

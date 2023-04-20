@@ -101,8 +101,9 @@ const SingleShow = ({ category }) => {
                       readOnly
                     />
                     <Divider orientation="vertical" flexItem />
-                    {data.episode_run_time[0]}min{" "}
-                    <Divider orientation="vertical" flexItem />
+                    {data.episode_run_time[0] ||
+                      data.last_episode_to_air.runtime}
+                    min <Divider orientation="vertical" flexItem />
                     {data.genres.map((genre, index) => (
                       <span key={genre.id}>
                         {genre.name}
@@ -161,15 +162,17 @@ const SingleShow = ({ category }) => {
                   <h5>Last episode to air</h5>
                   <img
                     src={
-                      "https://www.themoviedb.org/t/p/w1280/" +
-                      data.last_episode_to_air.still_path
+                      data.last_episode_to_air?.still_path !== null || undefined
+                        ? "https://www.themoviedb.org/t/p/w1280/" +
+                          data.last_episode_to_air?.still_path
+                        : "https://via.placeholder.com/400"
                     }
                   ></img>
                   <p>
-                    Episode: {data.last_episode_to_air.episode_number} Season:
-                    {data.last_episode_to_air.season_number}
+                    Episode: {data.last_episode_to_air?.episode_number} Season:
+                    {data.last_episode_to_air?.season_number}
                   </p>
-                  <p>"{data.last_episode_to_air.name}"</p>
+                  <p>"{data.last_episode_to_air?.name}"</p>
                 </div>
               </div>
             </div>

@@ -11,7 +11,7 @@
   height: 100vh;
   background-color: transparent;
   color: #002f5f;
-  min-width: 5%;
+  min-width: 85px;
   border-right-color: rgba(123, 123, 123, 0.203);
   border-right-width: 1px;
   border-right-style: solid;
@@ -103,4 +103,15 @@
 
 .search_bar h3 {
   font-size: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .page_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aside-home {
+    display: none;
+  }
 }

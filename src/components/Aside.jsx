@@ -8,6 +8,8 @@ import { BiMoon, BiSun } from "react-icons/bi";
 import SearchBar from "./SearchBar";
 import { RiMovie2Fill, RiMovie2Line, RiTvFill, RiTvLine } from "react-icons/ri";
 import { AiFillHome, AiOutlineHome } from "react-icons/ai";
+import { Switch } from "@mui/material";
+import Navbar from "./Navbar";
 
 const Aside = ({ toggleTheme, theme, setTheme }) => {
   const [open, setClose] = useState(false);
@@ -138,7 +140,7 @@ const Aside = ({ toggleTheme, theme, setTheme }) => {
             </Link>
           </li>
           <div className="switch_container">
-            <ReactSwitch
+            {/* <ReactSwitch
               onColor={"#262626"}
               offColor={"#bfbfbf"}
               className="switch"
@@ -146,10 +148,19 @@ const Aside = ({ toggleTheme, theme, setTheme }) => {
               checkedIcon={<BiSun className="sun" />}
               onChange={() => toggleTheme() && setTheme("light")}
               checked={theme === "dark"}
+            /> */}
+            <Switch
+              defaultChecked
+              onChange={() => toggleTheme() && setTheme("light")}
+              checked={theme === "dark"}
             />
           </div>
         </ul>
       </div>
+      <div className="navbar-home">
+        <Navbar />
+      </div>
+
       <Outlet />
     </div>
   );

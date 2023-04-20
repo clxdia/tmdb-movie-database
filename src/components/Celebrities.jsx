@@ -30,7 +30,7 @@ const Celebrities = () => {
   }, []);
 
   return (
-    <>
+    <div className="celebrities_main">
       <h2 className="heading">Top People</h2>
       <div className="celebrities">
         {people &&
@@ -54,7 +54,7 @@ const Celebrities = () => {
             </div>
           ))}
       </div>
-    </>
+    </div>
   );
 };
 

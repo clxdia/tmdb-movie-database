@@ -75,4 +75,79 @@
 }
 
 @media screen and (max-width: 900px) {
+  .home_section {
+    color: rgb(28, 21, 53);
+    width: 100%;
+    height: 80vh;
+    position: relative;
+  }
+
+  .home-section-one {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding-top: 210px;
+  }
+
+  .overview {
+    display: none;
+  }
+
+  .bio {
+    width: 70%;
+    margin-top: 0vh;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .bio h2 {
+    margin: 0;
+    font-size: 35px;
+  }
+
+  .rating {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+
+  .shadow-gradient {
+    width: 100%;
+    background: linear-gradient(360deg, rgb(220, 220, 220), #00000000);
+    height: 70vh;
+    position: absolute;
+    bottom: 9px;
+  }
+
+  .shadow-gradient-bio {
+    width: 60%;
+    top: 0;
+    z-index: -0;
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(220, 220, 220, 0.719), #03ff9600);
+  }
+
+  #dark .shadow-gradient-bio {
+    background: linear-gradient(90deg, #16161a, #03ff9600);
+  }
+
+  #dark .shadow-gradient {
+    background: linear-gradient(360deg, #16161a, #03ff9600);
+  }
+
+  .home_content {
+    margin-left: 30px;
+  }
+
+  .button_view {
+    margin-top: 20px !important;
+    padding: 10px 40px 8px 40px !important;
+    width: 20%;
+  }
 }

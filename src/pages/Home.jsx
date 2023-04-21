@@ -48,7 +48,7 @@ const Home = () => {
         >
           <div className="shadow-gradient-bio"></div>
           <div className="bio">
-            <h2>{trending[0].title}</h2>
+            <h2>{trending[4].title}</h2>
             <div>
               <div className="rating">
                 <Rating
@@ -60,7 +60,7 @@ const Home = () => {
                 />
                 <p>Score: {trending[0].vote_average.toFixed(1)}</p>
               </div>
-              <p>{trending[0].overview}</p>
+              <p className="overview">{trending[0].overview}</p>
               <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>
                 <Button variant="contained" className="button_view">
                   View

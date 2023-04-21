@@ -113,7 +113,11 @@
     margin-top: 5px;
     display: flex;
     gap: 10px;
-    margin-bottom: 5px;
+    font-size: 13px;
+    margin-bottom: 0px;
+  }
+  .css-ryrseu-MuiRating-root {
+    font-size: 20px !important;
   }
 
   .shadow-gradient {
@@ -148,6 +152,6 @@
   .button_view {
     margin-top: 20px !important;
     padding: 10px 40px 8px 40px !important;
-    width: 20%;
+    width: 30%;
   }
 }

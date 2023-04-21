@@ -48,7 +48,7 @@ const Home = () => {
         >
           <div className="shadow-gradient-bio"></div>
           <div className="bio">
-            <h2>{trending[4].title}</h2>
+            <h2>{trending[0].title}</h2>
             <div>
               <div className="rating">
                 <Rating

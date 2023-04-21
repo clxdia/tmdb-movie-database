@@ -125,7 +125,7 @@
     background: linear-gradient(360deg, rgb(220, 220, 220), #00000000);
     height: 70vh;
     position: absolute;
-    bottom: 9px;
+    bottom: 0px;
   }
 
   .shadow-gradient-bio {

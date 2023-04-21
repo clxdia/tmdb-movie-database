@@ -101,8 +101,8 @@ h2 {
 
 .slider_single_box img {
   display: block;
-  width: 200px;
-  height: 300px;
+  width: 12vw;
+  height: 18vw;
   min-height: 300px;
   max-height: 300px;
   min-width: 200px;
@@ -135,9 +135,21 @@ h2 {
   justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .fade_effect {
     width: 50px;
+  }
+
+  .slider_single_box img {
+    display: block;
+    width: 40vw;
+    height: 60vw;
+    min-height: 100px;
+    max-height: 300px;
+    min-width: 100px;
+    max-width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
   h1 {

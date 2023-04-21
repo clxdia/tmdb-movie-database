@@ -5,59 +5,25 @@
   display: none;
 }
 
-.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
 .navbar_container {
+  background-color: transparent;
+  height: 50px;
   position: fixed;
-  z-index: 80;
-  width: 100%;
-  background-color: #001e3c;
-  padding: 15px 0px 15px 0px;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar {
-  display: flex;
-  position: fixed;
+  padding: 10px 30px 10px 30px;
   z-index: 99;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
 }
 
-/* NAVBAR OPEN */
-.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
-  background-color: #001e3c !important;
-}
-
-.css-163su90-MuiList-root {
-  display: flex !important;
-  gap: 20px;
-  flex-direction: column;
+.navbar_container a {
+  color: white !important;
 }
 
 .navbar_links {
-  padding-left: 15px;
-  margin-top: 3px;
-}
-
-.links_container {
-  justify-content: start;
   display: flex;
+  justify-content: space-between;
 }
 
-.navbar ul {
-  display: flex;
-  gap: 1px;
-  align-items: flex-end !important;
-}
-
-.navbar a {
-  color: white;
-}
+/* NAVBAR OPEN */
 
 .logo_desktop,
 .logo_mobile {
@@ -72,15 +38,6 @@
 
 .logo_mobile {
   display: none;
-}
-
-.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
-  background-color: #00264c !important;
-}
-
-.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
-  border-radius: 5px !important;
-  padding: 8px 10px 8px 10px !important;
 }
 
 a,
@@ -138,7 +95,7 @@ ul {
   background-color: #444;
 }
 
-.Mui-checked .MuiSwitch-thumb {
+/* .Mui-checked .MuiSwitch-thumb {
   background-color: gray;
   background-image: url("path/to/moon.svg");
   background-repeat: no-repeat;
@@ -148,7 +105,7 @@ ul {
 
 .MuiSwitch-colorSecondary.Mui-checked .MuiSwitch-thumb {
   background-image: url("path/to/sun.svg");
-}
+} */
 
 .switch {
   align-items: center !important;

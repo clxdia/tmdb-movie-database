@@ -16,6 +16,10 @@
   margin-top: 10px;
 }
 
+.single-item_card_mobile {
+  display: none;
+}
+
 h5 {
   font-size: 25px;
   font-weight: 100;
@@ -216,7 +220,7 @@ h5 {
   .poster_single-item {
     height: 70vh;
     width: 100%;
-
+    margin-top: -20px;
     background-size: cover;
     background-position: center;
   }

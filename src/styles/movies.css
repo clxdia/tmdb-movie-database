@@ -72,3 +72,80 @@
   transform: scale(120%);
   transition: all 300ms ease-in-out;
 }
+
+@media screen and (max-width: 900px) {
+  .movies-main {
+    padding-top: 8vh;
+    color: white;
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: rgb(220, 220, 220);
+  }
+
+  .slider_tvshows {
+    margin-left: 8%;
+    width: auto !important;
+  }
+
+  #dark .movies-main {
+    background: #16161a;
+  }
+
+  .featured_movie {
+    width: 100%;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .featured_tv {
+    width: 100%;
+    height: 60vh;
+    background-position: top;
+    background-size: cover;
+    position: relative;
+  }
+
+  .bio_movies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px;
+  }
+
+  .shadow-gradient-bio-movies {
+    height: 60vh !important;
+  }
+
+  .play_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: auto;
+  }
+  .play_button > svg,
+  .play_button > p {
+    transition: all 300ms ease-in-out;
+    width: 100px;
+    height: 70px;
+    text-align: center;
+    color: white;
+  }
+
+  .play_button:hover > svg,
+  .play_button:hover > p {
+    transform: scale(120%);
+    transition: all 300ms ease-in-out;
+  }
+}

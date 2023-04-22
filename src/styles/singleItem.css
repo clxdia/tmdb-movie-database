@@ -193,3 +193,102 @@ h5 {
 .recs_tv {
   margin-top: 40rem;
 }
+
+.single_item_card_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .shadow-gradient-bio {
+    display: none;
+  }
+
+  .single-item_details-cast {
+    margin-top: 10px;
+    gap: 20px !important;
+    margin-bottom: 10px;
+  }
+
+  .background_single-item {
+    display: none;
+  }
+
+  .poster_single-item {
+    height: 70vh;
+    width: 100%;
+
+    background-size: cover;
+    background-position: center;
+  }
+  .single-item_card {
+    display: none;
+  }
+  .single-item_genres {
+    margin: 20px 0px 20px 0px;
+  }
+
+  .single-item_details-cast {
+    margin-top: 10px;
+    gap: 100px;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+
+  .cast_members div {
+    align-items: center;
+    width: 2vw;
+    min-width: 50px;
+    min-height: 50px;
+    height: 2vw;
+    border-radius: 100%;
+    padding: 1px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .single-item_card_mobile {
+    display: block;
+    position: relative;
+    z-index: 11;
+    width: 80%;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .single-item_card_mobile h4 {
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  .single-item_title {
+    display: none;
+  }
+
+  .shadow-gradient_poster {
+    width: 100%;
+    background: linear-gradient(360deg, rgb(220, 220, 220), #03ff9600);
+    height: 20vh;
+    margin-top: -160px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .watchers div {
+    display: flex;
+  }
+
+  .recs,
+  .recs_tv {
+    margin-top: 5rem;
+    width: 90%;
+    margin-left: 40px;
+    color: white;
+  }
+
+  #dark .shadow-gradient_poster {
+    background: linear-gradient(360deg, #16161a, #03ff9600);
+  }
+}

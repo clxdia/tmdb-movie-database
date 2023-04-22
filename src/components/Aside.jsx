@@ -158,7 +158,7 @@ const Aside = ({ toggleTheme, theme, setTheme }) => {
         </ul>
       </div>
       <div className="navbar-home">
-        <Navbar />
+        <Navbar toggleTheme={toggleTheme} theme={theme} setTheme={setTheme} />
       </div>
 
       <Outlet />

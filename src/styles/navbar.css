@@ -10,11 +10,11 @@
   height: 50px;
   position: fixed;
   padding: 20px 30px 20px 30px;
-  z-index: 99;
+  z-index: 90;
   width: 100%;
 }
 
-.navbar_container a {
+.navbar_container svg {
   color: white !important;
 }
 
@@ -25,6 +25,24 @@
 }
 
 /* NAVBAR OPEN */
+
+.navbar_open {
+  width: 100%;
+  height: auto;
+  background-color: white !important;
+  z-index: 99;
+  padding: 20px 30px 20px 30px;
+  position: absolute;
+}
+
+.navbar_open_links {
+  justify-content: center;
+  display: flex;
+  padding-left: 0px;
+  gap: 30px;
+  align-items: center;
+  flex-direction: column;
+}
 
 .logo_desktop,
 .logo_mobile {

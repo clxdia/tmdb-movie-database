@@ -35,7 +35,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home_section">
+    <>
       {trending && (
         <div
           className="home-section-one"
@@ -77,7 +77,7 @@ const Home = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

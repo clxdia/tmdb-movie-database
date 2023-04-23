@@ -162,8 +162,9 @@ const SingleItem = ({ category }) => {
                 "https://www.themoviedb.org/t/p/w1280/" + data.poster_path
               })`,
             }}
-          ></section>
-          <div className="shadow-gradient_poster"></div>
+          >
+            <div className="shadow-gradient_poster"></div>
+          </section>
           <div className="single-item_card_mobile">
             <h4>
               {data.original_title} &#40;{data.release_date?.slice(0, 4)}&#41;

@@ -220,6 +220,7 @@ h5 {
   .poster_single-item {
     height: 70vh;
     width: 100%;
+    position: relative;
     background-size: cover;
     background-position: center;
   }
@@ -272,15 +273,19 @@ h5 {
 
   .shadow-gradient_poster {
     width: 100%;
-    background: linear-gradient(360deg, rgb(220, 220, 220), #03ff9600);
+    background: linear-gradient(360deg, white, #03ff9600);
     height: 20vh;
-    margin-top: -160px;
     z-index: 10;
-    position: relative;
+    bottom: 0;
+    position: absolute;
   }
 
   .watchers div {
     display: flex;
+  }
+
+  .shadow-gradient_single-item {
+    display: none;
   }
 
   .recs,

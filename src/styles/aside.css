@@ -107,8 +107,7 @@
 
 @media screen and (max-width: 900px) {
   .page_wrapper {
-    display: flex;
-    flex-direction: column;
+    display: none;
   }
 
   .aside-home {

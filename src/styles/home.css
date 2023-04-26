@@ -9,6 +9,10 @@
   color: white;
 }
 
+.home-section-one_mobile {
+  display: none;
+}
+
 .home-section-one {
   background-position: 0% 400%;
   background-repeat: no-repeat;
@@ -16,6 +20,16 @@
   height: 100%;
   width: 100%;
   padding-top: 15vh;
+  position: relative;
+}
+
+.trending_container {
+  position: absolute;
+  height: 100vh;
+  top: 50vh;
+  margin-left: 140px;
+  overflow-x: hidden;
+  width: 88vw;
 }
 
 .bio {
@@ -44,7 +58,7 @@
   background: linear-gradient(360deg, white, #00000000);
   height: 70vh;
   position: absolute;
-  bottom: 9px;
+  bottom: 0px;
 }
 
 .shadow-gradient-bio {
@@ -83,12 +97,7 @@
   }
 
   .home-section-one {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    padding-top: 30vh;
-    width: 100%;
+    display: none;
   }
 
   .overview {
@@ -104,9 +113,22 @@
     position: relative;
   }
 
+  .trending_container {
+    position: absolute;
+    height: 100vh;
+    top: 57vh;
+    margin-left: 30px;
+    overflow-x: hidden;
+    width: 89%;
+  }
+
   .bio h2 {
     margin: 0;
     font-size: 35px;
+  }
+
+  .trending_container {
+    position: absolute;
   }
 
   .rating {
@@ -147,6 +169,18 @@
 
   .home_content {
     margin-left: 30px;
+    margin-top: 20vh;
+  }
+
+  .home-section-one_mobile {
+    display: block;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding-top: 30vh;
+    width: 100%;
   }
 
   .button_view {

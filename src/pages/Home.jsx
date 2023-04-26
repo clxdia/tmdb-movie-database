@@ -37,45 +37,87 @@ const Home = () => {
   return (
     <div className="home_section">
       {trending && (
-        <div
-          className="home-section-one"
-          style={{
-            backgroundImage: `url(${
-              "https://www.themoviedb.org/t/p/w1280/" +
-              trending[0].backdrop_path
-            })`,
-          }}
-        >
-          <div className="shadow-gradient-bio"></div>
-          <div className="bio">
-            <h2>{trending[0].title}</h2>
-            <div>
-              <div className="rating">
-                <Rating
-                  name="read-only"
-                  className="Rating"
-                  value={Math.round((trending[0].vote_average / 2) * 10) / 10}
-                  precision={0.5}
-                  readOnly
-                />
-                <p>Score: {trending[0].vote_average.toFixed(1)}</p>
+        <>
+          <div
+            className="home-section-one"
+            style={{
+              backgroundImage: `url(${
+                "https://www.themoviedb.org/t/p/w1280/" +
+                trending[0].backdrop_path
+              })`,
+            }}
+          >
+            <div className="shadow-gradient-bio"></div>
+            <div className="bio">
+              <h2>{trending[0].title}</h2>
+              <div>
+                <div className="rating">
+                  <Rating
+                    name="read-only"
+                    className="Rating"
+                    value={Math.round((trending[0].vote_average / 2) * 10) / 10}
+                    precision={0.5}
+                    readOnly
+                  />
+                  <p>Score: {trending[0].vote_average.toFixed(1)}</p>
+                </div>
+                <p className="overview">{trending[0].overview}</p>
+                <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>
+                  <Button variant="contained" className="button_view">
+                    View
+                  </Button>
+                </Link>
               </div>
-              <p className="overview">{trending[0].overview}</p>
-              <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>
-                <Button variant="contained" className="button_view">
-                  View
-                </Button>
-              </Link>
+            </div>
+            <div className="shadow-gradient"></div>
+            <div className="trending_container">
+              <Trending category={"movie"} title={"Movies"} />
             </div>
           </div>
-          <div className="shadow-gradient"></div>
+
+          <div
+            className="home-section-one_mobile"
+            style={{
+              backgroundImage: `url(${
+                "https://www.themoviedb.org/t/p/w1280/" +
+                trending[0].poster_path
+              })`,
+            }}
+          >
+            <div className="shadow-gradient-bio"></div>
+            <div className="bio">
+              <h2>{trending[0].title}</h2>
+              <div>
+                <div className="rating">
+                  <Rating
+                    name="read-only"
+                    className="Rating"
+                    value={Math.round((trending[0].vote_average / 2) * 10) / 10}
+                    precision={0.5}
+                    readOnly
+                  />
+                  <p>Score: {trending[0].vote_average.toFixed(1)}</p>
+                </div>
+
+                <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>
+                  <Button variant="contained" className="button_view">
+                    View
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="shadow-gradient"></div>
+            <div className="trending_container">
+              <Trending category={"movie"} title={"Movies"} />
+            </div>
+          </div>
+
           <div className="home_content">
-            <Trending category={"movie"} title={"Movies"} />
             <Trailers />
             <Celebrities />
             <Trending category={"tv"} title={"TV Shows"} />
           </div>
-        </div>
+        </>
       )}
     </div>
   );

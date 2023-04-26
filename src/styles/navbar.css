@@ -27,12 +27,21 @@
 /* NAVBAR OPEN */
 
 .navbar_open {
+  position: fixed;
+  top: -100%;
+  left: 0;
   width: 100%;
-  height: auto;
-  background-color: white !important;
-  z-index: 99;
-  padding: 20px 30px 20px 30px;
-  position: absolute;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.5s ease-in-out;
+}
+
+.navbar_open .active {
+  top: 0;
 }
 
 .navbar_open_links {

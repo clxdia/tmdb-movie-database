@@ -12,6 +12,7 @@
   padding: 20px 30px 20px 30px;
   z-index: 90;
   width: 100%;
+  transition: all 300ms ease-in;
 }
 
 .navbar_container svg {
@@ -27,30 +28,51 @@
 /* NAVBAR OPEN */
 
 .navbar_open {
-  position: fixed;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: top 0.5s ease-in-out;
+  width: 70%;
+  height: auto;
+  background-color: white;
+  z-index: 99;
+  padding: 20px 30px 10px 20px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border-radius: 8px;
 }
 
-.navbar_open .active {
-  top: 0;
+#dark .navbar_open {
+  background-color: #16161a;
+}
+
+.navbar_close {
+  transition: all 300ms ease-in;
+  width: 50%;
+  top: 15px;
+  left: 15px;
 }
 
 .navbar_open_links {
-  justify-content: center;
   display: flex;
   padding-left: 0px;
-  gap: 30px;
-  align-items: center;
+  gap: 20px;
+  color: white !important;
   flex-direction: column;
+  justify-content: center;
+}
+
+#dark .navbar_open_links li a {
+  color: white !important;
+}
+
+.navbar_open_links li a {
+  color: black !important;
+}
+
+#dark .navbar_open_links svg {
+  color: white !important;
+}
+
+.navbar_open_links svg {
+  color: black !important;
 }
 
 .logo_desktop,
@@ -107,6 +129,7 @@ ul {
   justify-content: center;
   height: fit-content;
   width: 100%;
+  padding: 10px;
 }
 
 .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase,

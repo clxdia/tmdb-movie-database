@@ -249,17 +249,12 @@ const Genres = ({ category }) => {
               className="slider_single_box"
               key={movie.id}
             >
-              <div
-                className="slider_single_box slider_single_box_genres"
-                key={movie.id}
-              >
-                <img
-                  src={
-                    "https://www.themoviedb.org/t/p/w1280/" + movie.poster_path
-                  }
-                ></img>
-                <p className="media_title">{movie.title || movie.name}</p>
-              </div>
+              <img
+                src={
+                  "https://www.themoviedb.org/t/p/w1280/" + movie.poster_path
+                }
+              ></img>
+              <p className="media_title">{movie.title || movie.name}</p>
             </Link>
           ))}
         </div>

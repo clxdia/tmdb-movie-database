@@ -52,7 +52,7 @@ const TVShows = () => {
           <div className="content">
             <div className="bio bio_movies">
               <h2>{movies[0].name}</h2>
-              <p>{movies[0].overview}</p>
+              <p className="movies_paragraph">{movies[0].overview}</p>
               <div className="rating">
                 <Rating
                   name="read-only"

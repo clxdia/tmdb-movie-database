@@ -44,7 +44,6 @@ const Movies = () => {
           title={"Now in Theatres"}
         />
       </div>
-
       {movies && (
         <div
           className="featured_movie"

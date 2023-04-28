@@ -1,6 +1,5 @@
 import { Close, Search } from "@mui/icons-material";
 import React, { useState } from "react";
-import { BiSearchAlt } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import "../styles/searchMB.css";
 

@@ -139,22 +139,15 @@ const Aside = ({ toggleTheme, theme, setTheme }) => {
               )}
             </Link>
           </li>
-          <div className="switch_container">
-            {/* <ReactSwitch
-              onColor={"#262626"}
-              offColor={"#bfbfbf"}
-              className="switch"
-              uncheckedIcon={<BiMoon className="moon" />}
-              checkedIcon={<BiSun className="sun" />}
-              onChange={() => toggleTheme() && setTheme("light")}
-              checked={theme === "dark"}
-            /> */}
-            <Switch
-              defaultChecked
-              onChange={() => toggleTheme() && setTheme("light")}
-              checked={theme === "dark"}
-            />
-          </div>
+          <li className="switch_aside">
+            <div className="switch_container">
+              <Switch
+                defaultChecked
+                onChange={() => toggleTheme() && setTheme("light")}
+                checked={theme === "dark"}
+              />
+            </div>
+          </li>
         </ul>
       </div>
       <div className="navbar-home">

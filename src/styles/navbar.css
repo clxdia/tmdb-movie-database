@@ -28,11 +28,11 @@
 /* NAVBAR OPEN */
 
 .navbar_open {
-  width: 70%;
+  width: 300px;
   height: auto;
   background-color: white;
   z-index: 99;
-  padding: 20px 30px 10px 20px;
+  padding: 20px 20px 10px 20px;
   position: absolute;
   top: 15px;
   left: 15px;
@@ -48,6 +48,15 @@
   width: 50%;
   top: 15px;
   left: 15px;
+}
+
+.navbar_open_links_container {
+  padding: 30px 20px 20px 30px;
+  width: 100%;
+}
+
+.navbar_open_flex {
+  display: flex;
 }
 
 .navbar_open_links {
@@ -67,11 +76,11 @@
   color: black !important;
 }
 
-#dark .navbar_open_links svg {
+#dark .navbar_open_flex svg {
   color: white !important;
 }
 
-.navbar_open_links svg {
+.navbar_open_flex svg {
   color: black !important;
 }
 
@@ -129,7 +138,7 @@ ul {
   justify-content: center;
   height: fit-content;
   width: 100%;
-  padding: 10px;
+  padding-top: 20px;
 }
 
 .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase,
@@ -144,6 +153,47 @@ ul {
 
 .MuiSwitch-track {
   background-color: #444;
+}
+
+.MuiSwitch-thumb {
+  background-position: center;
+  background-size: contain;
+  width: 35px !important;
+  height: 35px !important;
+  background-color: #002f5d !important;
+}
+
+.MuiSwitch-thumb {
+  background-image: url("/icons/sun.png");
+}
+
+.Mui-checked > .MuiSwitch-thumb {
+  background-image: url("/icons/moon.png");
+}
+
+.MuiSwitch-root {
+  width: 75px !important;
+  height: 44px !important;
+}
+
+.MuiSwitch-track {
+  border-radius: 10px !important;
+}
+
+.MuiTouchRipple-root {
+  margin-left: 10px;
+  border-radius: 100% !important;
+  width: 20px !important;
+  width: 20px !important;
+  display: none;
+}
+
+.MuiSwitch-switchBase {
+  padding: 0px !important;
+  margin-top: 4px !important;
+  margin-left: 10px !important;
+  margin-right: 3px !important;
+  border-radius: 30px !important;
 }
 
 /* .Mui-checked .MuiSwitch-thumb {

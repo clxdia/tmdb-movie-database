@@ -45,6 +45,11 @@
   margin-left: -40px;
 }
 
+.aside-home li:last-child {
+  border-style: none !important;
+  border-left-width: 0px;
+}
+
 .aside-links {
   padding: 20px 30px 20px 30px;
 }

@@ -19,6 +19,10 @@
   color: white;
 }
 
+.search_search-page {
+  display: block;
+}
+
 /* --------------- RESULTS --------------- */
 
 .results_container {
@@ -266,6 +270,10 @@
     font-size: 14px;
   }
 
+  .search_search-page {
+    display: none;
+  }
+
   .desc_container p {
     color: white;
   }
@@ -282,7 +290,7 @@
 
 @media screen and (max-width: 435px) {
   .single_result {
-    height: 400px;
+    height: 450px;
     overflow: hidden;
     border-radius: 10px;
     display: block;
@@ -296,10 +304,10 @@
   }
 
   .single_result img {
-    height: 400px;
+    height: 450px;
     width: 300px;
-    min-height: 400px;
-    max-height: 400px;
+    min-height: 450px;
+    max-height: 450px;
     min-width: 300px;
     max-width: 300px;
     object-fit: cover;

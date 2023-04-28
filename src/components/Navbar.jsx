@@ -2,21 +2,27 @@ import { Close, Menu, Search } from "@mui/icons-material";
 import { Divider, Paper, Switch } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import SearchMB from "./SearchMB";
 
 const Navbar = ({ toggleTheme, theme, setTheme }) => {
   const [open, setOpen] = useState();
+  const [search, setSearch] = useState();
 
-  const toggleOpen = () => {
+  const toggleOpenMenu = () => {
     setOpen(!open);
+  };
+
+  const toggleOpenSearch = () => {
+    setSearch(!search);
   };
 
   return (
     <div className="navbar_container">
       <ul className="navbar_links">
-        <li onClick={toggleOpen}>
+        <li onClick={toggleOpenMenu}>
           <Menu />
         </li>
-        <li>
+        <li onClick={toggleOpenSearch}>
           <Search />
         </li>
       </ul>
@@ -51,6 +57,15 @@ const Navbar = ({ toggleTheme, theme, setTheme }) => {
         </Paper>
       ) : (
         <div className="navbar_close"></div>
+      )}
+      {search ? (
+        <SearchMB
+          toggleOpenSearch={toggleOpenSearch}
+          search={search}
+          setSearch={setSearch}
+        />
+      ) : (
+        <></>
       )}
     </div>
   );

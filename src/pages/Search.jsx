@@ -37,7 +37,10 @@ const Search = () => {
 
   return (
     <div className="results_page">
-      <SearchComponent />
+      <div className="search_search-page">
+        <SearchComponent />
+      </div>
+
       <h2 className="results_for">Results for: "{state}"</h2>
       {isPending && (
         <section className="loading_results">

@@ -1,4 +1,4 @@
-import { Chip, Divider, Rating } from "@mui/material";
+import { Chip, Divider, Paper, Rating } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../styles/singleItem.css";
@@ -57,8 +57,6 @@ const SingleShow = ({ category }) => {
       });
   }, [id]);
 
-  console.log(data);
-
   return (
     <div className="single-item_page">
       {data && (
@@ -67,7 +65,7 @@ const SingleShow = ({ category }) => {
             className="background_single-item"
             style={{
               backgroundImage: `url(${
-                "https://www.themoviedb.org/t/p/w1280/" + data.backdrop_path
+                "https://www.themoviedb.org/t/p/original/" + data.backdrop_path
               })`,
             }}
           >
@@ -101,9 +99,12 @@ const SingleShow = ({ category }) => {
                       readOnly
                     />
                     <Divider orientation="vertical" flexItem />
-                    {data.episode_run_time[0] ||
-                      data.last_episode_to_air.runtime}
-                    min <Divider orientation="vertical" flexItem />
+                    <span>
+                      {data.episode_run_time[0] ||
+                        data.last_episode_to_air.runtime}
+                      min
+                    </span>
+                    <Divider orientation="vertical" flexItem />
                     {data.genres.map((genre, index) => (
                       <span key={genre.id}>
                         {genre.name}
@@ -176,7 +177,11 @@ const SingleShow = ({ category }) => {
                 </div>
               </div>
             </div>
+            <div className="shadow-gradient_single-item"></div>
           </section>
+
+          {/* --------------- MOBILE VERSION -------------- */}
+
           <section
             className="poster_single-item"
             style={{
@@ -264,8 +269,6 @@ const SingleShow = ({ category }) => {
               </div>
             </div>
           </div>
-
-          <div className="shadow-gradient_single-item"></div>
           {recs && (
             <div className="pages_slider_container recs recs_tv">
               <h5>Similar TV Shows</h5>

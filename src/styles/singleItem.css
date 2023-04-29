@@ -6,6 +6,7 @@
 .background_single-item {
   height: 60vh;
   width: 100%;
+  position: relative;
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(360deg, #16161a, #03ff9600);
@@ -29,15 +30,17 @@ h5 {
 .single-item_page h5,
 .single-item_page p,
 .single-item_page h4,
-.single-item_page span {
-  color: black !important;
+.single-item_page span,
+.single-item_page svg {
+  color: black;
 }
 
 #dark .single-item_page h5,
 #dark .single-item_page p,
 #dark .single-item_page h4,
-#dark .single-item_page span {
-  color: white !important;
+#dark .single-item_page span,
+.single-item_page svg {
+  color: white;
 }
 
 .watchers svg {
@@ -84,13 +87,21 @@ h5 {
   display: 100%;
 }
 
+.bio_second-row {
+  display: flex;
+  gap: 10px;
+}
+
+.Rating svg {
+  color: #faaf00 !important;
+}
 .shadow-gradient_single-item {
   width: 100%;
-  background: linear-gradient(360deg, rgb(220, 220, 220), #03ff9600);
-  height: 20vh;
-  margin-top: -190px;
+  background: linear-gradient(360deg, #f3eae5, #03ff9600);
+  height: 40vh;
   z-index: 10;
-  position: relative;
+  position: absolute;
+  bottom: 0px;
 }
 
 #dark .shadow-gradient_single-item {
@@ -105,6 +116,7 @@ h5 {
 .single-item_poster img {
   width: 13vw;
   margin-top: 10px;
+  border-radius: 10px;
 }
 
 .details {
@@ -265,6 +277,7 @@ h5 {
     position: relative;
     z-index: 11;
     width: 80%;
+    padding-top: 10px;
     margin: auto;
     color: white;
     display: flex;
@@ -272,9 +285,23 @@ h5 {
     gap: 15px;
   }
 
+  .new_bio {
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0px !important;
+  }
+
   .single-item_card_mobile h4 {
     font-size: 24px;
-    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .tagline {
+    text-align: center;
   }
 
   .single-item_title {
@@ -284,7 +311,7 @@ h5 {
   .shadow-gradient_poster {
     width: 100%;
     background: linear-gradient(360deg, white, #03ff9600);
-    height: 20vh;
+    height: 60vh;
     z-index: 10;
     bottom: 0;
     position: absolute;

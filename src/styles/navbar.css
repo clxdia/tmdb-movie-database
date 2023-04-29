@@ -26,6 +26,15 @@
   padding-left: 0px;
 }
 
+.navbar_links svg {
+  color: black !important;
+  box-shadow: 52px 40px 80px rgba(0, 0, 0, 0.31);
+}
+
+#dark .navbar_links svg {
+  color: white !important;
+}
+
 /* NAVBAR OPEN */
 
 .navbar_open {

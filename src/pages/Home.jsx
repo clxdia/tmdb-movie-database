@@ -42,7 +42,7 @@ const Home = () => {
             className="home-section-one"
             style={{
               backgroundImage: `url(${
-                "https://www.themoviedb.org/t/p/w1280/" +
+                "https://www.themoviedb.org/t/p/original/" +
                 trending[0].backdrop_path
               })`,
             }}

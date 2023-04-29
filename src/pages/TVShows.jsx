@@ -44,7 +44,8 @@ const TVShows = () => {
           className="featured_tv"
           style={{
             backgroundImage: `url(${
-              "https://www.themoviedb.org/t/p/w1280/" + movies[0].backdrop_path
+              "https://www.themoviedb.org/t/p/original/" +
+              movies[0].backdrop_path
             })`,
           }}
         >

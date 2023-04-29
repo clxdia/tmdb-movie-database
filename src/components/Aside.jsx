@@ -10,6 +10,7 @@ import { RiMovie2Fill, RiMovie2Line, RiTvFill, RiTvLine } from "react-icons/ri";
 import { AiFillHome, AiOutlineHome } from "react-icons/ai";
 import { Switch } from "@mui/material";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Aside = ({ toggleTheme, theme, setTheme }) => {
   const [open, setClose] = useState(false);
@@ -154,6 +155,7 @@ const Aside = ({ toggleTheme, theme, setTheme }) => {
         <Navbar toggleTheme={toggleTheme} theme={theme} setTheme={setTheme} />
       </div>
       <Outlet />
+      <Footer />
     </div>
   );
 };

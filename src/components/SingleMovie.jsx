@@ -68,7 +68,7 @@ const SingleItem = ({ category }) => {
             className="background_single-item"
             style={{
               backgroundImage: `url(${
-                "https://www.themoviedb.org/t/p/w1280/" + data.backdrop_path
+                "https://www.themoviedb.org/t/p/original/" + data.backdrop_path
               })`,
             }}
           >
@@ -153,8 +153,9 @@ const SingleItem = ({ category }) => {
                 </div>
               </div>
             </div>
+            <div className="shadow-gradient_single-item"></div>
           </section>
-
+          {/* ------------ MOBILE VERSION --------------------- */}
           <section
             className="poster_single-item"
             style={{
@@ -166,79 +167,75 @@ const SingleItem = ({ category }) => {
             <div className="shadow-gradient_poster"></div>
           </section>
           <div className="single-item_card_mobile">
-            <h4>
-              {data.original_title} &#40;{data.release_date?.slice(0, 4)}&#41;
-            </h4>
-            <div className="single-item_bio">
-              <div className="sigle-item_desc">
-                <h5 className="single-item_title">{data.title}</h5>
-                <p className="tagline">{data.tagline}</p>
-                <Divider className="divider" />
-                <div className="watchers">
-                  <RemoveRedEyeIcon />
-                  <p>{data.vote_count}</p>
-                  <Rating
-                    name="read-only"
-                    className="Rating"
-                    value={Math.round((data.vote_average / 2) * 10) / 10}
-                    precision={0.5}
-                    readOnly
-                  />
-                  <Divider orientation="vertical" flexItem />
-                  <p>{data.runtime}min </p>
-                </div>
-                <Divider className="divider" />
-                <div className="single-item_genres">
-                  {data.genres.map((genre, index) => (
-                    <span key={genre.id}>
-                      {genre.name}
-                      {index < data.genres.length - 1 && " / "}
+            <h4>{data.original_title}</h4>
+
+            <p className="tagline">{data.tagline}</p>
+            <Divider className="divider" />
+            <div className="new_bio">
+              <p>{data.release_date?.slice(0, 4)}</p>
+              <Divider orientation="vertical" flexItem />
+              {data.genres.map((genre, index) => (
+                <span key={genre.id}>
+                  {genre.name}
+                  {index < data.genres.length - 1 && ", "}
+                </span>
+              ))}
+              <Divider orientation="vertical" flexItem />
+              <p>{data.runtime}min </p>
+              <Divider orientation="vertical" flexItem />
+              <div className="bio_second-row">
+                <RemoveRedEyeIcon />
+                <p>{data.vote_count}</p>
+                <Rating
+                  name="read-only"
+                  className="Rating"
+                  value={Math.round((data.vote_average / 2) * 10) / 10}
+                  precision={0.5}
+                  readOnly
+                />
+              </div>
+            </div>
+
+            <div className="sigle-item_desc">
+              <Divider className="divider" />
+              <div className="storyline storyline_movie">
+                <h5>Storyline</h5>
+                <p>{data.overview}</p>
+              </div>
+              <Divider className="divider" />
+              <div className="single-item_details-cast">
+                <div className="details">
+                  <h5>Details</h5>
+                  {data.credits.crew.slice(0, 4).map((member) => (
+                    <span key={member.id}>
+                      {member.known_for_department}: <span>{member.name}</span>
                     </span>
                   ))}
+                  <p>Country: {data.production_countries[0]?.iso_3166_1}</p>
+                  <p>Main Language: {data.spoken_languages[0]?.english_name}</p>
+                  <p>Release Date: {data.release_date}</p>
                 </div>
                 <Divider className="divider" />
-                <div className="storyline storyline_movie">
-                  <h5>Storyline</h5>
-                  <p>{data.overview}</p>
-                </div>
-                <Divider className="divider" />
-                <div className="single-item_details-cast">
-                  <div className="details">
-                    <h5>Details</h5>
-                    {data.credits.crew.slice(0, 4).map((member) => (
-                      <p key={member.id}>
-                        {member.known_for_department}:{" "}
-                        <span>{member.name}</span>
-                      </p>
-                    ))}
-                    <p>Country: {data.production_countries[0]?.iso_3166_1}</p>
-                    <p>
-                      Main Language: {data.spoken_languages[0]?.english_name}
-                    </p>
-                    <p>Release Date: {data.release_date}</p>
-                  </div>
-                  <Divider className="divider" />
-                  <div className="cast">
-                    <h5>Cast</h5>
-                    {data.credits.cast.slice(0, 4).map((member) => (
-                      <div key={member.id} className="cast_members">
-                        <div
-                          style={{
-                            backgroundImage: `url(${
-                              "https://www.themoviedb.org/t/p/w1280/" +
-                              member.profile_path
-                            })`,
-                          }}
-                        ></div>
-                        <span>{member.name}</span>
-                      </div>
-                    ))}
-                  </div>
+                <div className="cast">
+                  <h5>Cast</h5>
+                  {data.credits.cast.slice(0, 4).map((member) => (
+                    <div key={member.id} className="cast_members">
+                      <div
+                        style={{
+                          backgroundImage: `url(${
+                            "https://www.themoviedb.org/t/p/w1280/" +
+                            member.profile_path
+                          })`,
+                        }}
+                      ></div>
+                      <span>{member.name}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-          <div className="shadow-gradient_single-item"></div>
+
           {recs && (
             <div className="pages_slider_container recs">
               <h5>Similar Movies</h5>

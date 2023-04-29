@@ -4,7 +4,7 @@
   width: 100%;
   height: auto;
   position: relative;
-  background: rgb(220, 220, 220);
+  background: #f3eae5;
 }
 
 .slider_tvshows {
@@ -80,7 +80,7 @@
     width: 100%;
     height: auto;
     position: relative;
-    background: rgb(220, 220, 220);
+    background: #f3eae5;
   }
 
   .slider_tvshows {

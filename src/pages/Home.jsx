@@ -74,7 +74,7 @@ const Home = () => {
               <Trending category={"movie"} title={"Movies"} />
             </div>
           </div>
-
+          {/* -------------------MOBILE VERSION ---------  */}
           <div
             className="home-section-one_mobile"
             style={{

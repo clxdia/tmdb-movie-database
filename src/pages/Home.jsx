@@ -107,12 +107,9 @@ const Home = () => {
               </div>
             </div>
             <div className="shadow-gradient"></div>
-            <div className="trending_container">
-              <Trending category={"movie"} title={"Movies"} />
-            </div>
           </div>
-
           <div className="home_content">
+            <Trending category={"movie"} title={"Movies"} />
             <Trailers />
             <Celebrities />
             <Trending category={"tv"} title={"TV Shows"} />

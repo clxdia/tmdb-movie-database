@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.page_wrapper:last-child {
+  flex-direction: column;
+}
+
 .aside-home {
   position: fixed;
   top: 0;

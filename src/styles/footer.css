@@ -1,0 +1,85 @@
+.footer_wrapper {
+  height: 30vh;
+  width: 100%;
+  background-color: rgb(203, 203, 203);
+}
+
+#dark .footer_wrapper {
+  background-color: black;
+  color: white;
+}
+
+.footer_wrapper hr,
+.footer_wrapper h3 {
+  margin-left: 140px;
+  margin-right: 50px;
+}
+
+.footer_wrapper h3 {
+  text-align: right;
+  font-size: 13px;
+  font-weight: 100;
+  color: rgb(68, 68, 68);
+}
+
+.footer_wrapper hr {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.footer_content {
+  display: flex;
+  margin-left: 140px;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 10px;
+  margin-right: 50px;
+  margin-top: 40px;
+}
+
+.footer_content h2 {
+  width: 100% !important;
+  font-weight: 100;
+  font-family: var(--font-satoshi);
+}
+
+.footer_content p {
+  color: rgb(68, 68, 68);
+  font-size: 13px;
+  font-weight: 100;
+  margin-top: 15px;
+}
+
+.footer_icon {
+  display: flex;
+  gap: 20px;
+}
+
+.footer_content-left {
+  width: 20%;
+}
+
+.footer_content img {
+  width: 50px !important;
+  height: 50px;
+}
+
+.footer_content span {
+  font-size: 25px;
+}
+
+.footer_links {
+  display: flex;
+  gap: 20px;
+  text-transform: uppercase;
+}
+
+.footer_links a {
+  color: black !important;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+#dark .footer_links a {
+  color: white !important;
+}

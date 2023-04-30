@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap");
 @import url("https://api.fontshare.com/v2/css?f[]=quilon@400&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=author@1&display=swap");
 
 * {
   border: 0;
@@ -20,11 +21,13 @@ html {
   --purple: "#7f5af0";
   --green: "#2cb67d";
   --font-satoshi: "Satoshi", sans-serif;
+  --font-author: "Author", sans-serif;
 }
 
 body {
   font-family: var(--font-satoshi);
   position: relative;
+  font-weight: 500;
 }
 
 .App {
@@ -38,7 +41,7 @@ body {
 
 h1 {
   font-size: 3.5rem;
-  font-family: "Satoshi", sans-serif;
+  font-family: var(--font-author);
   letter-spacing: 0.9px;
   color: white;
   width: fit-content;
@@ -50,6 +53,8 @@ h1 {
 h2 {
   width: 96%;
   margin: auto;
+  font-weight: 600;
+  font-family: var(--font-author);
 }
 
 .media_title {

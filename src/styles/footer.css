@@ -4,6 +4,10 @@
   background-color: rgb(203, 203, 203);
 }
 
+.footer_wrapper_mobile {
+  display: none;
+}
+
 #dark .footer_wrapper {
   background-color: black;
   color: white;

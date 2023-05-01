@@ -3,12 +3,15 @@
   width: 100%;
   height: auto;
   position: relative;
-  background-color: #f3eae5;
+}
+
+.home_content {
+  margin-left: 30px;
+  margin-top: -45vh;
 }
 
 #dark .home_section {
   color: white;
-  background-color: #16161a;
 }
 
 .home-section-one_mobile {
@@ -82,11 +85,6 @@
 
 .home_content {
   margin-left: 140px;
-  margin-bottom: 100px;
-}
-
-#dark .home_content {
-  background-color: #16161a;
 }
 
 .button_view {

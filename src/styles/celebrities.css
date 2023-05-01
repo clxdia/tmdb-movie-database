@@ -16,6 +16,10 @@
   scrollbar-width: none;
 }
 
+.celebrities:hover {
+  scrollbar-width: auto;
+}
+
 .celebrities::-webkit-scrollbar {
   width: 0px !important;
   background-color: transparent !important;

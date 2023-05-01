@@ -4,6 +4,10 @@
   padding-top: 50px;
 }
 
+.videos_container:hover {
+  scrollbar-width: auto;
+}
+
 .videos_container {
   display: flex;
   align-items: flex-start;

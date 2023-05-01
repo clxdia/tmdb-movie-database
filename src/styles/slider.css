@@ -2,6 +2,10 @@
   overflow-x: hidden;
 }
 
+.pages_slider:hover {
+  scrollbar-width: auto;
+}
+
 .slider {
   width: 100%;
   margin-left: 0%;

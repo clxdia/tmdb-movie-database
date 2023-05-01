@@ -1,7 +1,7 @@
 .footer_wrapper {
   height: 30vh;
   width: 100%;
-  background-color: rgb(203, 203, 203);
+  background-color: #bfb6b1;
 }
 
 .footer_wrapper_mobile {
@@ -98,7 +98,7 @@
     height: auto;
     width: 100%;
     text-align: center;
-    background-color: rgb(203, 203, 203);
+    background-color: #bfb6b1;
   }
   #dark .footer_wrapper_mobile {
     background-color: black;

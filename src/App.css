@@ -33,7 +33,7 @@ body {
 .App {
   height: auto;
   background-color: #f3eae5;
-  background-image: url("/dark.png");
+  background-image: url("/bg-light.png");
   background-position: center;
 }
 

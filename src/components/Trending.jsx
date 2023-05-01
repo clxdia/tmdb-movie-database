@@ -34,7 +34,7 @@ export default function MediaPages({ category, title }) {
     <div className="slider slider_tvshows">
       <h3 className="heading">Trending now in {title}</h3>
       {isPending && (
-        <div className="pages_skeleton">
+        <div className="skeleton_movies">
           <Skeleton variant="rounded" width={200} height={280} />
           <Skeleton variant="rounded" width={200} height={280} />
           <Skeleton variant="rounded" width={200} height={280} />

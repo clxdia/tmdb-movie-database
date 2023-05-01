@@ -3,13 +3,25 @@ import Trailers from "../components/Trailers";
 import Celebrities from "../components/Celebrities";
 import "../styles/home.css";
 import Trending from "../components/Trending";
-import { Button, Rating } from "@mui/material";
+import { Button, Rating, Skeleton } from "@mui/material";
 import { Link } from "react-router-dom";
+import Reviews from "../components/Reviews";
 
 const Home = () => {
-  const [trending, getTrending] = useState(null);
+  const [trending, setTrending] = useState(null);
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(true);
+  const [reviews, getReviews] = useState(null);
+  const [moviesId, setMoviesId] = useState(null);
+
+  const getTrending = (movies) => {
+    setTrending(movies);
+  };
+  useEffect(() => {
+    if (trending) {
+      setMoviesId(trending.map((movie) => movie.id));
+    }
+  }, [trending]);
 
   useEffect(() => {
     fetch(
@@ -25,6 +37,7 @@ const Home = () => {
       })
       .then((data) => {
         getTrending(data.results);
+
         setIsPending(false);
         setError(null);
       })
@@ -36,6 +49,17 @@ const Home = () => {
 
   return (
     <div className="home_section">
+      {isPending && (
+        <>
+          <Skeleton className="home-section-one home-section-one_skeleton"></Skeleton>
+          <div className="home_content">
+            <Trending category={"movie"} title={"Movies"} />
+            <Trailers />
+            <Celebrities />
+            <Trending category={"tv"} title={"TV Shows"} />
+          </div>
+        </>
+      )}
       {trending && (
         <>
           <div
@@ -112,6 +136,15 @@ const Home = () => {
             <Trailers />
             <Celebrities />
             <Trending category={"tv"} title={"TV Shows"} />
+            <h3>Top Reviews</h3>
+            <div className="review_wrapper">
+              {moviesId &&
+                moviesId
+                  .slice(0, 8)
+                  .map((movieId) => (
+                    <Reviews key={movieId} movieId={movieId} />
+                  ))}
+            </div>
           </div>
         </>
       )}

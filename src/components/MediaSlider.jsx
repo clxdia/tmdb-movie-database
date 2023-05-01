@@ -36,7 +36,7 @@ export default function MediaPages({ category, string, title }) {
       <h3 className="heading">{title}</h3>
       <div className="slider">
         {isPending && (
-          <div className="pages_skeleton">
+          <div className="skeleton_movies">
             <Skeleton variant="rounded" width={200} height={280} />
             <Skeleton variant="rounded" width={200} height={280} />
             <Skeleton variant="rounded" width={200} height={280} />

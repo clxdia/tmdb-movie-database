@@ -136,7 +136,7 @@ const Home = () => {
             <Trailers />
             <Celebrities />
             <Trending category={"tv"} title={"TV Shows"} />
-            <h3>Top Reviews</h3>
+            <h3 className="reviews_title">Top Reviews</h3>
             <div className="review_wrapper">
               {moviesId &&
                 moviesId

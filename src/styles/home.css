@@ -22,10 +22,15 @@
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100vh !important;
   width: 100%;
+  max-width: 100% !important;
   padding-top: 15vh;
   position: relative;
+}
+
+.home-section-one_skeleton {
+  margin-top: -210px !important;
 }
 
 .trending_container {
@@ -91,6 +96,124 @@
   margin-top: 20px !important;
   padding: 10px 40px 8px 40px !important;
   width: 20%;
+}
+
+.reviews {
+  border-radius: 12px !important;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  min-height: 20vh;
+  padding: 0px 20px 20px 20px;
+}
+
+.review_content:first-child {
+  overflow-y: scroll;
+  height: 10vh !important;
+}
+
+.reviews:nth-child(5) .review_content {
+  overflow-y: scroll;
+  height: 32vh !important;
+}
+
+.reviews:nth-child(1) {
+  grid-row-end: span 2;
+  grid-row-end: span 1;
+}
+
+.reviews:nth-child(2) {
+  grid-column-end: span 2;
+  grid-row-end: span 1;
+}
+
+.reviews:nth-child(5) {
+  grid-column-end: span 1;
+  grid-row-end: span 2;
+}
+
+.reviews:nth-child(6) {
+  grid-column-end: span 2;
+  grid-row-end: span 1;
+}
+
+.reviews_title {
+  margin-top: 5rem;
+}
+
+.review_wrapper {
+  display: grid;
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 4fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin-right: 50px;
+  width: 95%;
+  height: 60vh;
+}
+
+.review_wrapper p {
+  font-size: 15px;
+}
+
+.icon_name {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: auto;
+  position: sticky;
+  top: 0px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+
+.icon_name p {
+  font-size: 17px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.author_info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.reviews .Rating {
+  width: 30px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .review_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+    gap: 2%;
+    width: 95%;
+    height: auto;
+  }
+
+  .reviews {
+    border-radius: 12px !important;
+    background-color: white;
+    height: 100%;
+    width: 49%;
+    padding: 0px 20px 20px 20px;
+    margin-bottom: 7px;
+    min-height: 25vh;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -193,5 +316,15 @@
     margin-top: 20px !important;
     padding: 10px 40px 8px 40px !important;
     width: 30%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .reviews {
+    border-radius: 12px !important;
+    background-color: white;
+    height: 30%;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
   }
 }

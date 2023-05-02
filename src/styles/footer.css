@@ -1,7 +1,8 @@
 .footer_wrapper {
-  height: 30vh;
+  height: auto;
   width: 100%;
   background-color: #bfb6b1;
+  padding-bottom: 40px;
 }
 
 .footer_wrapper_mobile {

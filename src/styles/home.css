@@ -206,6 +206,7 @@
   }
 
   .reviews {
+    position: relative;
     border-radius: 12px !important;
     background-color: white;
     height: 100%;
@@ -321,6 +322,7 @@
 
 @media screen and (max-width: 650px) {
   .reviews {
+    position: relative;
     border-radius: 12px !important;
     background-color: white;
     height: 30%;

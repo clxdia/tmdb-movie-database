@@ -12,6 +12,9 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 2000px;
+  background-color: #16161a;
+  margin: auto;
 }
 
 :root {
@@ -32,7 +35,7 @@ body {
 
 .App {
   height: auto;
-  background-color: #f3eae5;
+
   background-image: url("/bg-light.png");
   background-position: center;
 }

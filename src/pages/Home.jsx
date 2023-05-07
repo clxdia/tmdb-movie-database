@@ -131,6 +131,8 @@ const Home = () => {
             </div>
             <div className="shadow-gradient"></div>
           </div>
+
+          {/*------ SHARED HOME CONTENT--------- */}
           <div className="home_content">
             <Trending category={"movie"} title={"Movies"} />
             <Trailers />

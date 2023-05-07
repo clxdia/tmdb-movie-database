@@ -1,6 +1,7 @@
 .celebrities_main {
   margin-top: 60px;
   min-height: 250px;
+  max-height: 500px;
   height: 25vw;
 }
 
@@ -38,6 +39,8 @@
   width: 13vw;
   min-width: 100px;
   min-height: 100px;
+  max-width: 300px;
+  max-height: 300px;
   height: 13vw;
   border-radius: 100%;
   background-size: cover;

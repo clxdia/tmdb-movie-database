@@ -4,7 +4,6 @@
   width: 100%;
   height: auto;
   position: relative;
-  background: #f3eae5;
 }
 
 .movies_paragraph {
@@ -34,10 +33,6 @@
 .slider_tvshows {
   margin-left: 8%;
   width: auto !important;
-}
-
-#dark .movies-main {
-  background: #16161a;
 }
 
 .featured_movie {

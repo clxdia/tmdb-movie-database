@@ -316,7 +316,7 @@ h5 {
 
   .shadow-gradient_poster {
     width: 100%;
-    background: linear-gradient(360deg, white, #03ff9600);
+    background: linear-gradient(360deg, #f3eae5, #03ff9600);
     height: 60vh;
     z-index: 10;
     bottom: 0;

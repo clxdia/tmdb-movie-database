@@ -76,7 +76,7 @@
   align-items: center;
   gap: 15px;
   margin: auto;
-  margin-right: 0px;
+  margin-right: 30px;
 }
 .play_button > svg,
 .play_button > p {

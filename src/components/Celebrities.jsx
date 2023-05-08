@@ -31,7 +31,7 @@ const Celebrities = () => {
 
   return (
     <div className="celebrities_main">
-      <h2 className="heading">Top People</h2>
+      <h3 className="heading">Top People</h3>
       <div className="celebrities">
         {people &&
           people.map((person, number) => (

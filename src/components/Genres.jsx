@@ -238,9 +238,9 @@ const Genres = ({ category }) => {
           </Grid>
         </Grid>
       </div>
-      <h2 className="heading heading_genres">
+      <h3 className="heading heading_genres">
         {genreName} {category}
-      </h2>
+      </h3>
       {sortedMovies.length > 0 && (
         <div className="movies_grid">
           {sortedMovies.map((movie) => (

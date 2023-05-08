@@ -36,13 +36,13 @@ body {
 .App {
   height: auto;
 
-  background-image: url("/bg-light.png");
+  background-image: url("/icons/bg-light.png");
   background-position: center;
 }
 
 #dark {
   background-color: #16161a;
-  background-image: url("/dark.png");
+  background-image: url("/icons/bg-dark.png");
 }
 
 h1 {

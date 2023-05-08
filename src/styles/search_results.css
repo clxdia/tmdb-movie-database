@@ -15,6 +15,10 @@
   color: rgb(28, 21, 53);
 }
 
+#dark .results_page p {
+  color: white;
+}
+
 .search_search-page-results {
   width: 100%;
 }

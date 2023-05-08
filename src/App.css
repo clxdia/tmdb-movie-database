@@ -13,7 +13,7 @@
 html {
   scroll-behavior: smooth;
   max-width: 2000px;
-  background-color: #16161a;
+  background-color: #454545;
   margin: auto;
 }
 
@@ -38,6 +38,7 @@ body {
 
   background-image: url("/icons/bg-light.png");
   background-position: center;
+  background-size: cover;
 }
 
 #dark {

@@ -6,7 +6,7 @@
 .pages_slider,
 .pages_skeleton {
   width: 100%;
-  min-width: 50vw;
+  min-width: 40vw;
   margin: auto;
   justify-content: flex-start;
   height: auto;

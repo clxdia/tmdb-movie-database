@@ -83,6 +83,9 @@ const ResultsUI = ({ film }) => {
               <p className="title_film">{film.title || film.name}</p>
               <p className="date">&#40;{film.release_date.slice(0, 4)}&#41;</p>
             </div>
+            <div className="desc">
+              <p>{film.overview}</p>
+            </div>
           </div>
         </Paper>
         <div className="title_date_mobile">

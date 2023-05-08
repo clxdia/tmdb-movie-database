@@ -37,7 +37,7 @@ const Search = () => {
 
   return (
     <div className="results_page">
-      <div className="search_search-page">
+      <div className="search_search-page-results">
         <SearchComponent />
       </div>
 

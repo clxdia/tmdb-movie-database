@@ -29,6 +29,8 @@
   padding-top: 15vh;
   position: relative;
   max-width: 2000px;
+  background-color: rgb(170, 170, 170);
+  background-blend-mode: multiply;
 }
 
 .home-section-one_skeleton {
@@ -46,20 +48,31 @@
 
 .bio {
   width: 40vw;
-  margin-top: 0vh;
+  margin-top: 6vh;
   margin-bottom: 50px;
   margin-left: 140px;
   z-index: 10;
   position: relative;
+  color: white !important;
 }
 
 .bio h2 {
   margin: 0;
   font-size: 60px;
+  color: white;
+}
+
+.overview {
+  width: 80%;
+  margin-top: 10px;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  word-spacing: 1.5px;
+  line-height: 23px;
 }
 
 .rating {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
@@ -95,9 +108,11 @@
 }
 
 .button_view {
-  margin-top: 20px !important;
+  margin-top: 0px !important;
   padding: 10px 40px 8px 40px !important;
   width: 20%;
+  border-radius: 20px !important;
+  background: linear-gradient(90deg, #002f5f, #7d34eb);
 }
 
 .reviews {
@@ -237,7 +252,7 @@
 
   .bio {
     width: 70%;
-    margin-top: 0vh;
+    margin-top: 5vh;
     margin-bottom: 10px;
     margin-left: 30px;
     z-index: 10;
@@ -266,17 +281,17 @@
     margin-top: 5px;
     display: flex;
     gap: 10px;
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 0px;
   }
   .css-ryrseu-MuiRating-root {
-    font-size: 20px !important;
+    font-size: 13px !important;
   }
 
   .shadow-gradient {
     width: 100%;
     background: linear-gradient(360deg, white, #00000000);
-    height: 70vh;
+    height: 35vh;
     position: absolute;
     bottom: 0px;
   }
@@ -313,12 +328,17 @@
     height: 80vh;
     padding-top: 30vh;
     width: 100%;
+    background-color: rgb(170, 170, 170);
+    background-blend-mode: multiply;
   }
 
   .button_view {
+    align-items: center;
+    font-size: 13px !important;
     margin-top: 20px !important;
-    padding: 10px 40px 8px 40px !important;
+    padding: 8px 40px 8px 40px !important;
     width: 30%;
+    background: linear-gradient(90deg, #002f5f, #7d34eb);
   }
 }
 

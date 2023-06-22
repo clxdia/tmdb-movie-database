@@ -36,11 +36,13 @@
 .aside-home li * {
   text-align: left;
   display: flex;
-  color: rgb(28, 21, 53);
+  color: rgb(159, 159, 159);
+  stroke: 1px;
 }
 
 #dark .aside-home li * {
-  color: #808080;
+  color: white;
+  stroke: 1px;
 }
 
 .aside-home li {

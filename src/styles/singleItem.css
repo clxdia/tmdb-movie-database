@@ -9,6 +9,8 @@
   position: relative;
   background-size: cover;
   background-position: center;
+  background-color: rgb(170, 170, 170);
+  background-blend-mode: multiply;
 }
 
 .background_single-item > .shadow-gradient-bio {
@@ -83,7 +85,7 @@ h5 {
 .single-item_card h4 {
   font-size: 40px;
   font-weight: 600;
-  font-family: var(--font-author);
+  font-family: var(--font-sans);
 }
 
 .single-item_bio {
@@ -99,7 +101,9 @@ h5 {
 
 .Rating svg {
   color: #faaf00 !important;
+  font-size: 22px;
 }
+
 .shadow-gradient_single-item {
   width: 100%;
   background: linear-gradient(360deg, #f3eae5, #03ff9600);

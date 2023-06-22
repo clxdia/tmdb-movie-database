@@ -37,6 +37,7 @@ const Home = () => {
       })
       .then((data) => {
         getTrending(data.results);
+        console.log(data.results);
 
         setIsPending(false);
         setError(null);
@@ -71,9 +72,10 @@ const Home = () => {
               })`,
             }}
           >
-            <div className="shadow-gradient-bio"></div>
+            {/* <div className="shadow-gradient-bio"></div> */}
             <div className="bio">
               <h2>{trending[0].title}</h2>
+              <p className="overview">{trending[0].overview}</p>
               <div>
                 <div className="rating">
                   <Rating
@@ -85,7 +87,7 @@ const Home = () => {
                   />
                   <p>Score: {trending[0].vote_average.toFixed(1)}</p>
                 </div>
-                <p className="overview">{trending[0].overview}</p>
+
                 <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>
                   <Button variant="contained" className="button_view">
                     View
@@ -119,7 +121,7 @@ const Home = () => {
                     precision={0.5}
                     readOnly
                   />
-                  <p>Score: {trending[0].vote_average.toFixed(1)}</p>
+                  <p>{trending[0].vote_count} Reviews</p>
                 </div>
 
                 <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>

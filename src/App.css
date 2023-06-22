@@ -3,6 +3,7 @@
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap");
 @import url("https://api.fontshare.com/v2/css?f[]=quilon@400&display=swap");
 @import url("https://api.fontshare.com/v2/css?f[]=author@1&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@1&display=swap");
 
 * {
   border: 0;
@@ -25,6 +26,7 @@ html {
   --green: "#2cb67d";
   --font-satoshi: "Satoshi", sans-serif;
   --font-author: "Author", sans-serif;
+  --font-sans: "General Sans", sans-serif;
 }
 
 body {
@@ -35,7 +37,6 @@ body {
 
 .App {
   height: auto;
-
   background-image: url("/icons/bg-light.png");
   background-position: center;
   background-size: cover;
@@ -48,7 +49,7 @@ body {
 
 h1 {
   font-size: 3.5rem;
-  font-family: var(--font-author);
+  font-family: var(--font-sans);
   letter-spacing: 0.9px;
   color: white;
   width: fit-content;
@@ -61,11 +62,12 @@ h2 {
   width: 96%;
   margin: auto;
   font-weight: 600;
-  font-family: var(--font-author);
+  font-family: var(--font-sans);
+  mix-blend-mode: difference !important;
 }
 
 .media_title {
-  color: rgb(28, 21, 53);
+  color: #16161a;
 }
 
 #dark .media_title {
@@ -78,11 +80,11 @@ h2 {
   font-size: 20px;
   margin: 0;
   margin-bottom: 15px;
-  color: rgb(28, 21, 53);
+  color: #16161a;
 }
 
 .bio {
-  color: rgb(28, 21, 53);
+  color: #16161a;
 }
 
 #dark .heading,

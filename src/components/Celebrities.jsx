@@ -50,7 +50,7 @@ const Celebrities = () => {
                 </div>
               </div>
 
-              <p>{person.name}</p>
+              <p className="media_title">{person.name}</p>
             </div>
           ))}
       </div>

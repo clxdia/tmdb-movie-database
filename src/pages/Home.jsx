@@ -6,6 +6,8 @@ import Trending from "../components/Trending";
 import { Button, Rating, Skeleton } from "@mui/material";
 import { Link } from "react-router-dom";
 import Reviews from "../components/Reviews";
+import HomeMB from "./HomeMB";
+import HomeContent from "../components/HomeContent";
 
 const Home = () => {
   const [trending, setTrending] = useState(null);
@@ -49,110 +51,105 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home_section">
-      {isPending && (
-        <>
-          <Skeleton className="home-section-one home-section-one_skeleton"></Skeleton>
-          <div className="home_content">
-            <Trending category={"movie"} title={"Movies"} />
-            <Trailers />
-            <Celebrities />
-            <Trending category={"tv"} title={"TV Shows"} />
-          </div>
-        </>
-      )}
-      {trending && (
-        <>
-          <div
-            className="home-section-one"
-            style={{
-              backgroundImage: `url(${
-                "https://www.themoviedb.org/t/p/original/" +
-                trending[0].backdrop_path
-              })`,
-            }}
-          >
-            {/* <div className="shadow-gradient-bio"></div> */}
-            <div className="bio">
-              <h2>{trending[0].title}</h2>
-              <p className="overview">{trending[0].overview}</p>
-              <div>
-                <div className="rating">
-                  <Rating
-                    name="read-only"
-                    className="Rating"
-                    value={Math.round((trending[0].vote_average / 2) * 10) / 10}
-                    precision={0.5}
-                    readOnly
-                  />
-                  <p>Score: {trending[0].vote_average.toFixed(1)}</p>
+    <>
+      <div className="home_section">
+        {isPending && (
+          <>
+            <Skeleton className="home-section-one home-section-one_skeleton"></Skeleton>
+            <div className="home_content">
+              <Trending category={"movie"} title={"Movies"} />
+              <Trailers />
+              <Celebrities />
+              <Trending category={"tv"} title={"TV Shows"} />
+            </div>
+          </>
+        )}
+        {trending && (
+          <>
+            <div
+              className="home-section-one"
+              style={{
+                backgroundImage: `url(${
+                  "https://www.themoviedb.org/t/p/original/" +
+                  trending[0].backdrop_path
+                })`,
+              }}
+            >
+              {/* <div className="shadow-gradient-bio"></div> */}
+              <div className="bio">
+                <h2>{trending[0].title}</h2>
+                <p className="overview">{trending[0].overview}</p>
+                <div>
+                  <div className="rating">
+                    <Rating
+                      name="read-only"
+                      className="Rating"
+                      value={
+                        Math.round((trending[0].vote_average / 2) * 10) / 10
+                      }
+                      precision={0.5}
+                      readOnly
+                    />
+                    <p>Score: {trending[0].vote_average.toFixed(1)}</p>
+                  </div>
+
+                  <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>
+                    <Button variant="contained" className="button_view">
+                      View
+                    </Button>
+                  </Link>
                 </div>
-
-                <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>
-                  <Button variant="contained" className="button_view">
-                    View
-                  </Button>
-                </Link>
               </div>
+
+              <div className="shadow-gradient"></div>
             </div>
 
-            <div className="shadow-gradient"></div>
-          </div>
+            {/* -------------------MOBILE VERSION ---------  */}
+            <div
+              className="home-section-one_mobile"
+              style={{
+                backgroundImage: `url(${
+                  "https://www.themoviedb.org/t/p/w1280/" +
+                  trending[0].backdrop_path
+                })`,
+              }}
+            >
+              <div className="shadow-gradient-bio"></div>
+              <div className="bio">
+                <h2>{trending[0].title}</h2>
+                <div>
+                  <div className="rating">
+                    <Rating
+                      name="read-only"
+                      className="Rating"
+                      value={
+                        Math.round((trending[0].vote_average / 2) * 10) / 10
+                      }
+                      precision={0.5}
+                      readOnly
+                    />
+                    <p>{trending[0].vote_count} Reviews</p>
+                  </div>
 
-          {/* -------------------MOBILE VERSION ---------  */}
-          <div
-            className="home-section-one_mobile"
-            style={{
-              backgroundImage: `url(${
-                "https://www.themoviedb.org/t/p/w1280/" +
-                trending[0].poster_path
-              })`,
-            }}
-          >
-            <div className="shadow-gradient-bio"></div>
-            <div className="bio">
-              <h2>{trending[0].title}</h2>
-              <div>
-                <div className="rating">
-                  <Rating
-                    name="read-only"
-                    className="Rating"
-                    value={Math.round((trending[0].vote_average / 2) * 10) / 10}
-                    precision={0.5}
-                    readOnly
-                  />
-                  <p>{trending[0].vote_count} Reviews</p>
+                  <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>
+                    <Button variant="contained" className="button_view">
+                      View
+                    </Button>
+                  </Link>
                 </div>
-
-                <Link to={`/movie/${trending[0].id}`} key={trending[0].id}>
-                  <Button variant="contained" className="button_view">
-                    View
-                  </Button>
-                </Link>
               </div>
+              <div className="shadow-gradient"></div>
             </div>
-            <div className="shadow-gradient"></div>
-          </div>
 
-          {/*------ SHARED HOME CONTENT--------- */}
-          <div className="home_content">
-            <Trending category={"movie"} title={"Movies"} />
-            <Trailers />
-            <Celebrities />
-            <Trending category={"tv"} title={"TV Shows"} />
-            <h3 className="reviews_title">Top Reviews</h3>
-            <div className="review_wrapper">
-              {moviesId &&
-                moviesId
-                  .slice(0, 8)
-                  .map((movieId) => (
-                    <Reviews key={movieId} movieId={movieId} />
-                  ))}
-            </div>
-          </div>
-        </>
-      )}
-    </div>
+            {/*------ SHARED HOME CONTENT--------- */}
+          </>
+        )}
+        <div className="home_content_desktop">
+          <HomeContent />
+        </div>
+      </div>
+      <HomeMB />
+    </>
   );
 };
 

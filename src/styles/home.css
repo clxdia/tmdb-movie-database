@@ -49,7 +49,6 @@
 .bio {
   width: 40vw;
   margin-top: 6vh;
-  margin-bottom: 50px;
   margin-left: 140px;
   z-index: 10;
   position: relative;
@@ -124,14 +123,29 @@
   padding: 0px 20px 20px 20px;
 }
 
-.review_content:first-child {
+.reviews:nth-child(1) .review_content {
+  overflow-y: scroll;
+  height: 25vh !important;
+}
+
+.reviews:nth-child(2) .review_content {
+  overflow-y: scroll;
+  height: 39vh !important;
+}
+
+.reviews:nth-child(3) .review_content {
+  overflow-y: scroll;
+  height: 10vh !important;
+}
+
+.reviews:nth-child(4) .review_content {
   overflow-y: scroll;
   height: 10vh !important;
 }
 
 .reviews:nth-child(5) .review_content {
   overflow-y: scroll;
-  height: 32vh !important;
+  height: 10vh !important;
 }
 
 .reviews:nth-child(1) {
@@ -155,7 +169,7 @@
 }
 
 .reviews_title {
-  margin-top: 5rem;
+  padding-top: 5rem;
 }
 
 .review_wrapper {
@@ -252,11 +266,11 @@
 
   .bio {
     width: 70%;
-    margin-top: 5vh;
-    margin-bottom: 10px;
+    position: absolute;
     margin-left: 30px;
     z-index: 10;
-    position: relative;
+    bottom: 0;
+    height: fit-content;
   }
 
   .trending_container {
@@ -285,12 +299,12 @@
     margin-bottom: 0px;
   }
   .css-ryrseu-MuiRating-root {
-    font-size: 13px !important;
+    font-size: 10px !important;
   }
 
   .shadow-gradient {
     width: 100%;
-    background: linear-gradient(360deg, white, #00000000);
+    background: linear-gradient(360deg, #f3eae5, #00000000);
     height: 35vh;
     position: absolute;
     bottom: 0px;
@@ -303,7 +317,7 @@
     z-index: 0;
     position: absolute;
     height: 100%;
-    background: linear-gradient(90deg, white, #03ff9600);
+    background: linear-gradient(90deg, #f3eae5, #03ff9600);
   }
 
   #dark .shadow-gradient-bio {
@@ -316,16 +330,20 @@
 
   .home_content {
     margin-left: 30px;
-    margin-top: -20vh;
+    margin-top: 5vh;
+  }
+
+  .reviews_title {
+    padding-top: 0rem;
   }
 
   .home-section-one_mobile {
-    display: block;
+    display: flex;
     position: relative;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 40vh;
     padding-top: 30vh;
     width: 100%;
     background-color: rgb(170, 170, 170);
@@ -339,6 +357,10 @@
     padding: 8px 40px 8px 40px !important;
     width: 30%;
     background: linear-gradient(90deg, #002f5f, #7d34eb);
+  }
+
+  .review_content {
+    font-size: 13px !important;
   }
 }
 

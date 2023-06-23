@@ -41,7 +41,7 @@ const Movies = () => {
         <MediaSlider
           category={"movie"}
           string={"now_playing"}
-          title={"Now in Theatres"}
+          title={"Now Playing in Theatres"}
         />
       </div>
       {movies && (
@@ -73,7 +73,7 @@ const Movies = () => {
             <div className="play_button">
               <TrailerLink media_type={"movie"} media_id={movies[0].id} />
               <PlayCircleOutlineIcon />
-              <p>PLAY VIDEO</p>
+              <p>PLAY TRAILER</p>
             </div>
           </div>
         </div>

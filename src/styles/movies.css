@@ -52,6 +52,7 @@
 }
 
 .bio_movies {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,6 +61,7 @@
 .content {
   display: flex;
   height: 100%;
+  align-items: center;
   justify-content: center;
   margin-bottom: 0px !important;
   padding-bottom: 0px;
@@ -76,7 +78,6 @@
   align-items: center;
   gap: 15px;
   margin: auto;
-  margin-right: 30px;
 }
 .play_button > svg,
 .play_button > p {
@@ -95,7 +96,7 @@
 
 @media screen and (max-width: 900px) {
   .movies-main {
-    padding-top: 8vh;
+    padding-top: 10vh;
     color: white;
     width: 100%;
     height: auto;
@@ -129,15 +130,18 @@
   }
 
   .bio_movies {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 50%;
   }
 
   .content {
     display: flex;
     height: 100%;
     justify-content: center;
+    align-items: center;
     margin-bottom: 0px !important;
     padding-bottom: 0px;
   }
@@ -147,11 +151,13 @@
   }
 
   .play_button {
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
+    width: 40%;
     margin: auto;
     margin-right: 15px;
   }
@@ -159,9 +165,14 @@
   .play_button > p {
     transition: all 300ms ease-in-out;
     width: 100px;
-    height: 70px;
+    height: fit-content;
     text-align: center;
     color: white;
+    align-items: center;
+  }
+
+  .play_button > svg {
+    width: 70px;
   }
 
   .play_button:hover > svg,

@@ -66,7 +66,7 @@ const Reviews = ({ movieId }) => {
           </div>
           <Rating
             name="read-only"
-            className="Rating"
+            className="Rating rating_home"
             value={Math.round((review.author_details?.rating / 2) * 10) / 10}
             precision={0.5}
             readOnly

@@ -32,7 +32,7 @@ export default function MediaPages({ category, title }) {
 
   return (
     <div className="slider slider_tvshows">
-      <h3 className="heading">Trending now in {title}</h3>
+      <h3 className="heading">Trending Now in {title}</h3>
       {isPending && (
         <div className="skeleton_movies">
           <Skeleton variant="rounded" width={200} height={280} />

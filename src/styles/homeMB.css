@@ -1,0 +1,40 @@
+.home_mobile {
+  display: none;
+}
+
+.home_mobile_buttons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10vh;
+  padding-left: 0px;
+  width: 80%;
+  margin: auto;
+}
+
+.home_mobile_button > button {
+  width: fit-content;
+  padding: 0;
+  cursor: pointer;
+  font-size: 14px;
+
+  border: 1px solid white;
+  padding: 8px 15px 8px 15px;
+  border-radius: 30px;
+}
+
+.opacity_high {
+  color: white;
+  background-color: rgb(163, 127, 255);
+  border-bottom: 2px solid blue;
+}
+
+.opacity_low {
+  color: rgb(135, 135, 135);
+  background-color: transparent;
+}
+
+@media screen and (max-width: 900px) {
+  .home_mobile {
+    display: block;
+  }
+}

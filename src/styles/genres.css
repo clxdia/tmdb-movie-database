@@ -35,7 +35,14 @@
 }
 
 .button_genres {
+  align-items: center;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  padding: 0px;
   width: 100%;
+  padding: 4px !important;
+  border-radius: 20px !important;
   background: linear-gradient(90deg, #7f5af0, #2cb67d);
 }
 

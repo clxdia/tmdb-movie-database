@@ -41,6 +41,8 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  background-color: rgb(170, 170, 170);
+  background-blend-mode: multiply;
 }
 
 .featured_tv {
@@ -49,6 +51,8 @@
   background-position: top;
   background-size: cover;
   position: relative;
+  background-color: rgb(170, 170, 170);
+  background-blend-mode: multiply;
 }
 
 .bio_movies {
@@ -69,6 +73,7 @@
 
 .shadow-gradient-bio-movies {
   height: 60vh !important;
+  width: 30% !important;
 }
 
 .play_button {
@@ -115,7 +120,7 @@
 
   .featured_movie {
     width: 100%;
-    height: 40vh;
+    height: 60vh;
     background-position: center;
     background-size: cover;
     position: relative;

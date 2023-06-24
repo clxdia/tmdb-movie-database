@@ -164,4 +164,8 @@
     padding: 40px;
     color: rgb(112, 112, 112);
   }
+
+  .footer_icon h2 {
+    color: gray;
+  }
 }

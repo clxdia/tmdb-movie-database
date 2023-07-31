@@ -58,6 +58,8 @@
 
 .aside-links {
   padding: 20px 30px 20px 30px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .aside-home li > svg {

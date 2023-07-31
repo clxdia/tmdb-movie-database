@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer_content">
           <div className="footer_content-left">
             <div className="footer_icon">
-              <img src={icon}></img>
+              <img src={icon} aria-hidden="true"></img>
               <h2>MovieFinder</h2>
             </div>
             <p>

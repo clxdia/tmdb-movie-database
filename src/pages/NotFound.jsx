@@ -12,7 +12,7 @@ const NotFound = () => {
         Oops!! <SentimentVeryDissatisfiedIcon fontSize="large" />
       </h2>
       <h3>This is not the page you are looking for.</h3>
-      <Button variant="contained">
+      <Button variant="contained" tabIndex={1}>
         <Link to="/">Take me back</Link>
       </Button>
     </div>

@@ -3,8 +3,6 @@ import { Link, Outlet } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import "../styles/aside.css";
-import ReactSwitch from "react-switch";
-import { BiMoon, BiSun } from "react-icons/bi";
 import SearchBar from "./SearchBar";
 import { RiMovie2Fill, RiMovie2Line, RiTvFill, RiTvLine } from "react-icons/ri";
 import { AiFillHome, AiOutlineHome } from "react-icons/ai";
@@ -29,6 +27,8 @@ const Aside = ({ toggleTheme, theme, setTheme }) => {
       setClose(false);
     }
   };
+
+  const moviesRoutePath = "/movies";
 
   return (
     <div className="page_wrapper">
@@ -99,7 +99,7 @@ const Aside = ({ toggleTheme, theme, setTheme }) => {
           >
             <Link
               className="aside-links"
-              to="movies"
+              to={moviesRoutePath}
               onClick={() => handleLinkClick("Movies")}
               style={{
                 transform: active === "Movies" ? "scale(120%)" : "scale(100%)",

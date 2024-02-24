@@ -60,7 +60,7 @@ const SingleShow = ({ category }) => {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${
+      `https://api.themoviedb.org/3/tv/${id}/credits?api_key=${
         import.meta.env.VITE_API_KEY
       }`
     )
@@ -74,7 +74,6 @@ const SingleShow = ({ category }) => {
         getCredits(data);
         setIsPending(false);
         setError(null);
-        console.log(data.crew[0].department)
       })
       .catch((err) => {
         setIsPending(false);
@@ -271,12 +270,12 @@ const SingleShow = ({ category }) => {
                   <div className="single-item_details-cast">
                     <div className="details">
                       <h5>Details</h5>
-                      {data.credits.crew.slice(0, 4).map((member) => (
-                        <p key={member.id}>
-                          {member.known_for_department}:{" "}
-                          <span>{member.name}</span>
-                        </p>
-                      ))}
+                      {credits && credits.crew.slice(0, 4).map((member) => (
+                          <p key={member.id}>
+                            {member.known_for_department}:{" "}
+                            <span>{member.name}</span>
+                          </p>
+                        ))} 
                       <p>Country: {data.production_countries[0]?.iso_3166_1}</p>
                       <p>
                         Main Language: {data.spoken_languages[0]?.english_name}
@@ -286,19 +285,19 @@ const SingleShow = ({ category }) => {
                     <Divider className="divider" />
                     <div className="cast">
                       <h5>Cast</h5>
-                      {data.credits.cast.slice(0, 4).map((member) => (
-                        <div key={member.id} className="cast_members">
-                          <div
-                            style={{
-                              backgroundImage: `url(${
-                                "https://www.themoviedb.org/t/p/w1280/" +
-                                member.profile_path
-                              })`,
-                            }}
-                          ></div>
-                          <span>{member.name}</span>
-                        </div>
-                      ))}
+                      {credits && credits.cast.slice(0, 4).map((member) => (
+                          <div key={member.id} className="cast_members">
+                            <div
+                              style={{
+                                backgroundImage: `url(${
+                                  "https://www.themoviedb.org/t/p/w1280/" +
+                                  member.profile_path
+                                })`,
+                              }}
+                            ></div>
+                            <span>{member.name}</span>
+                          </div>
+                        ))}
                     </div>
                   </div>
                 </div>

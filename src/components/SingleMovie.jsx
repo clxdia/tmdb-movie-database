@@ -77,7 +77,6 @@ const SingleItem = ({ category }) => {
         getCredits(data);
         setIsPending(false);
         setError(null);
-        console.log(data.crew[0].department)
       })
       .catch((err) => {
         setIsPending(false);

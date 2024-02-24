@@ -10,6 +10,7 @@ const SingleShow = ({ category }) => {
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [recs, getRecs] = useState();
+  const [credits, getCredits] = useState();
 
   useEffect(() => {
     fetch(
@@ -50,6 +51,30 @@ const SingleShow = ({ category }) => {
         getRecs(data.results);
         setIsPending(false);
         setError(null);
+      })
+      .catch((err) => {
+        setIsPending(false);
+        setError(err.message);
+      });
+  }, [id]);
+
+  useEffect(() => {
+    fetch(
+      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${
+        import.meta.env.VITE_API_KEY
+      }`
+    )
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("could not fetch the data from the api");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        getCredits(data);
+        setIsPending(false);
+        setError(null);
+        console.log(data.crew[0].department)
       })
       .catch((err) => {
         setIsPending(false);
@@ -123,12 +148,12 @@ const SingleShow = ({ category }) => {
                     <div className="single-item_details-cast">
                       <div className="details">
                         <h5>Details</h5>
-                        {data.credits.crew.slice(0, 4).map((member) => (
+                        {credits && credits.crew.slice(0, 4).map((member) => (
                           <p key={member.id}>
                             {member.known_for_department}:{" "}
                             <span>{member.name}</span>
                           </p>
-                        ))}
+                        ))} 
                         <p>
                           Country: {data.production_countries[0]?.iso_3166_1}
                         </p>
@@ -140,7 +165,7 @@ const SingleShow = ({ category }) => {
                       </div>
                       <div className="cast">
                         <h5>Cast</h5>
-                        {data.credits.cast.slice(0, 4).map((member) => (
+                        {credits && credits.cast.slice(0, 4).map((member) => (
                           <div key={member.id} className="cast_members">
                             <div
                               style={{
